@@ -1,7 +1,3 @@
-<head>
-  <title>Record Management</title>
-</head>
-
-<body>
-  <div id="render-target"></div>
-</body>
+Meteor.startup(function () {
+  ReactDOM.render(<PhysicalForm />, document.getElementById('render-target'));
+})
