@@ -4,6 +4,30 @@ PatientDetialLeft = React.createClass({
     $('.datepicker').pickadate({
       selectMonths: true, // Creates a dropdown to control month
       selectYears: 100 // Creates a dropdown of 15 years to control year
+    }),
+
+    $('#bod').focus(function(){
+      $('.patient-detail-box').addClass('box-key-press')
+    }).blur(function () {
+      $('.patient-detail-box').removeClass('box-key-press')
+    }),
+
+    $('#gender').focus(function(){
+      $('.patient-detail-box').addClass('box-key-press')
+    }).blur(function () {
+      $('.patient-detail-box').removeClass('box-key-press')
+    }),
+
+    $('#idCard').focus(function(){
+      $('.patient-detail-box').addClass('box-key-press')
+    }).blur(function () {
+      $('.patient-detail-box').removeClass('box-key-press')
+    }),
+
+    $('#occupation').focus(function(){
+      $('.patient-detail-box').addClass('box-key-press')
+    }).blur(function () {
+      $('.patient-detail-box').removeClass('box-key-press')
     })
   },
 

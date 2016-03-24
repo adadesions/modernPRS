@@ -4,7 +4,7 @@ let scroll = {
 
 let scrollPain = {
   overflowY: 'auto',
-  height: '95vh',
+  height: '92vh',
   display: 'flex',
   justifyContent: 'center'
 }
@@ -14,9 +14,61 @@ let container = {
 }
 PainSectionInput = React.createClass({
 
+  componentDidMount(){
+
+    $('#painScore').focus(function(){
+      $('.patient-pain-section-box').addClass('box-key-press')
+    }).blur(function () {
+      $('.patient-pain-section-box').removeClass('box-key-press')
+    }),
+
+    $('#typeOfPain').focus(function(){
+      $('.patient-pain-section-box').addClass('box-key-press')
+    }).blur(function () {
+      $('.patient-pain-section-box').removeClass('box-key-press')
+    }),
+
+    $('#duration').focus(function(){
+      $('.patient-pain-section-box').addClass('box-key-press')
+    }).blur(function () {
+      $('.patient-pain-section-box').removeClass('box-key-press')
+    }),
+
+    $('#agg').focus(function(){
+      $('.patient-pain-section-box').addClass('box-key-press')
+    }).blur(function () {
+      $('.patient-pain-section-box').removeClass('box-key-press')
+    }),
+
+    $('#rest').focus(function(){
+      $('.patient-pain-section-box').addClass('box-key-press')
+    }).blur(function () {
+      $('.patient-pain-section-box').removeClass('box-key-press')
+    }),
+
+    $('#painLocation').focus(function(){
+      $('.patient-pain-section-box').addClass('box-key-press')
+    }).blur(function () {
+      $('.patient-pain-section-box').removeClass('box-key-press')
+    }),
+
+    $('#presentAndPastHistory').focus(function(){
+      $('.patient-pain-section-box').addClass('box-key-press')
+    }).blur(function () {
+      $('.patient-pain-section-box').removeClass('box-key-press')
+    }),
+
+    $('#assessment').focus(function(){
+      $('.patient-pain-section-box').addClass('box-key-press')
+    }).blur(function () {
+      $('.patient-pain-section-box').removeClass('box-key-press')
+    })
+
+  },
+
   render(){
     return(
-      <div id="style-1" style={scrollPain} className="row">
+      <div id="style-1" style={scrollPain} className="row patient-pain-section-box">
         <div style={container}>
           <div className="input-field">
             <input id="painScore" type="text" className="validate"/>

@@ -1,5 +1,27 @@
 PatientDetialRight = React.createClass({
 
+  componentDidMount(){
+
+    $('#age').focus(function(){
+      $('.patient-detail-box').addClass('box-key-press')
+    }).blur(function () {
+      $('.patient-detail-box').removeClass('box-key-press')
+    }),
+
+    $('#emergencyCall').focus(function(){
+      $('.patient-detail-box').addClass('box-key-press')
+    }).blur(function () {
+      $('.patient-detail-box').removeClass('box-key-press')
+    }),
+
+    $('#tel').focus(function(){
+      $('.patient-detail-box').addClass('box-key-press')
+    }).blur(function () {
+      $('.patient-detail-box').removeClass('box-key-press')
+    })
+
+  },
+
   render(){
     return(
       <div className="row">
