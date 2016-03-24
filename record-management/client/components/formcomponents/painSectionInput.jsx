@@ -72,35 +72,35 @@ PainSectionInput = React.createClass({
         <div style={container}>
           <div className="input-field">
             <input id="painScore" type="text" className="validate"/>
-            <label htmlFor="painScore">Pain score</label>
+            <label htmlhtmlFor="painScore">Pain score</label>
           </div>
           <div className="input-field">
             <input id="typeOfPain" type="text" className="validate"/>
-            <label htmlFor="typeOfPain">Type of pain</label>
+            <label htmlhtmlFor="typeOfPain">Type of pain</label>
           </div>
           <div className="input-field">
             <input id="duration" type="text" className="validate"/>
-            <label htmlFor="duration">Duration</label>
+            <label htmlhtmlFor="duration">Duration</label>
           </div>
           <div className="input-field">
             <input id="agg" type="text" className="validate"/>
-            <label htmlFor="agg">Agg</label>
+            <label htmlhtmlFor="agg">Agg</label>
           </div>
           <div className="input-field">
             <input id="rest" type="text" className="validate"/>
-            <label htmlFor="rest">Rest</label>
+            <label htmlhtmlFor="rest">Rest</label>
           </div>
           <div className="input-field col s12">
             <textarea style={scroll} id="painLocation" className="materialize-textarea"></textarea>
-            <label htmlFor="painLocation">Pain Location</label>
+            <label htmlhtmlFor="painLocation">Pain Location</label>
           </div>
           <div className="input-field col s12">
             <textarea style={scroll} id="presentAndPastHistory" className="materialize-textarea"></textarea>
-            <label htmlFor="presentAndPastHistory">Present & Past History</label>
+            <label htmlhtmlFor="presentAndPastHistory">Present & Past History</label>
           </div>
           <div className="input-field col s12">
             <textarea style={scroll} id="assessment" className="materialize-textarea"></textarea>
-            <label htmlFor="assessment">Assessment</label>
+            <label htmlhtmlFor="assessment">Assessment</label>
           </div>
         </div>
       </div>

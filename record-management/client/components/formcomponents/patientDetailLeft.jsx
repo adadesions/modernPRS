@@ -36,19 +36,19 @@ PatientDetialLeft = React.createClass({
       <div className="row">
         <div className="input-field">
           <input id="bod" type="date" className="datepicker"/>
-          <label htmlFor="bod">BOD</label>
+          <label htmlhtmlFor="bod">BOD</label>
         </div>
         <div className="input-field">
           <input id="gender" type="text" className="validate"/>
-          <label htmlFor="gender">Gender</label>
+          <label htmlhtmlFor="gender">Gender</label>
         </div>
         <div className="input-field">
           <input id="idCard" type="text" className="validate"/>
-          <label htmlFor="idCard">ID Card</label>
+          <label htmlhtmlFor="idCard">ID Card</label>
         </div>
         <div className="input-field">
           <input id="occupation" type="text" className="validate"/>
-          <label htmlFor="occupation">Occupation</label>
+          <label htmlhtmlFor="occupation">Occupation</label>
         </div>
       </div>
     )

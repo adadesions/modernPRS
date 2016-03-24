@@ -42,19 +42,19 @@ PatientInterview = React.createClass({
       <div id="style-1" style={scrollInterview} className="row patient-interview-box">
         <div className="input-field col s12">
           <textarea style={scroll} id="address" className="materialize-textarea"></textarea>
-          <label htmlFor="address">Address</label>
+          <label htmlhtmlFor="address">Address</label>
         </div>
         <div className="input-field col s12">
           <textarea style={scroll} id="chiefComplaint" className="materialize-textarea"></textarea>
-          <label htmlFor="chiefComplaint">Chief Complaint</label>
+          <label htmlhtmlFor="chiefComplaint">Chief Complaint</label>
         </div>
         <div className="input-field col s12">
           <textarea style={scroll} id="precautionAndContraindication" className="materialize-textarea"></textarea>
-          <label for="precautionAndContraindication">Contraindication/Precaution</label>
+          <label htmlFor="precautionAndContraindication">Contraindication/Precaution</label>
         </div>
         <div className="input-field col s12">
           <textarea style={scroll} id="diagnosis" className="materialize-textarea"></textarea>
-          <label htmlFor="diagnosis">Diagnosis</label>
+          <label htmlhtmlFor="diagnosis">Diagnosis</label>
         </div>
       </div>
     )
