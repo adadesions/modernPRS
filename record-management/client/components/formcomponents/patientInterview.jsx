@@ -22,7 +22,7 @@ PatientInterview = React.createClass({
         </div>
         <div className="input-field col s12">
           <textarea style={scroll} id="precautionAndContraindication" className="materialize-textarea"></textarea>
-          <label for="precautionAndContraindication">Precaution/Contraindication</label>
+          <label for="precautionAndContraindication">Contraindication/Precaution</label>
         </div>
         <div className="input-field col s12">
           <textarea style={scroll} id="diagnosis" className="materialize-textarea"></textarea>
