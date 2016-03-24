@@ -39,8 +39,11 @@ PatientDetialLeft = React.createClass({
           <label htmlFor="bod">BOD</label>
         </div>
         <div className="input-field">
-          <input id="gender" type="text" className="validate"/>
-          <label htmlFor="gender">Gender</label>
+          <select id="gender" className="browser-default">
+            <option value="" disabled selected>Gender ?</option>
+            <option value="1">Male</option>
+            <option value="2">Female</option>
+          </select>
         </div>
         <div className="input-field">
           <input id="idCard" type="text" className="validate"/>
