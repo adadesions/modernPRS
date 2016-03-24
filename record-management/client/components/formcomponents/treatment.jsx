@@ -14,17 +14,33 @@ let container = {
 }
 Treatment = React.createClass({
 
+  componentDidMount(){
+
+    $('#treatment').focus(function(){
+      $('.patient-treatment-box').addClass('box-key-press')
+    }).blur(function () {
+      $('.patient-treatment-box').removeClass('box-key-press')
+    }),
+
+    $('#note').focus(function(){
+      $('.patient-treatment-box').addClass('box-key-press')
+    }).blur(function () {
+      $('.patient-treatment-box').removeClass('box-key-press')
+    })
+
+  },
+
   render(){
     return(
-      <div id="style-1" style={scrollTreatment} className="row">
+      <div id="style-1" style={scrollTreatment} className="row patient-treatment-box">
         <div style={container}>
           <div className="input-field col s12">
             <textarea style={scroll} id="treatment" className="materialize-textarea"></textarea>
-            <label htmlFor="treatment">Treatment</label>
+            <label htmlhtmlFor="treatment">Treatment</label>
           </div>
           <div className="input-field col s12">
             <textarea style={scroll} id="note" className="materialize-textarea"></textarea>
-            <label htmlFor="note">Note</label>
+            <label htmlhtmlFor="note">Note</label>
           </div>
         </div>
       </div>

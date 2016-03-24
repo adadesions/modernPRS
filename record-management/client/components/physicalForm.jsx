@@ -1,5 +1,5 @@
 let controlBar = {
-    backgroundColor: '#0098CF'
+      backgroundColor: '#0098CF'
   },
   center = {
     display: 'flex',
@@ -33,7 +33,7 @@ let controlBar = {
     width: '80%'
   },
   marginRow = {
-    paddingTop: '5em'
+    paddingTop: '4.4em'
   }
 
 PhysicalForm = React.createClass({
@@ -80,11 +80,11 @@ PhysicalForm = React.createClass({
                 <div style={center} className="col l6">
                   <PatiendImage />
                 </div>
-                <div className="col l6">
+                <div className="col l6 patient-name-box">
                   <PatientName />
                 </div>
               </div>
-              <div className="row">
+              <div className="row patient-detail-box">
                 <div className="col l6">
                   <PatientDetialLeft />
                 </div>
@@ -106,10 +106,10 @@ PhysicalForm = React.createClass({
             </div>
           </div>
           <div className="row">
-            <div style={paddingLeftCol} className="col l6">
-              <PatientModel />
+            <div style={paddingLeftCol} className="col l7">
+              <PatientOrgan />
             </div>
-            <div style={paddingRightcol} className="col l6">
+            <div style={paddingRightcol} className="col l5">
               <Treatment />
             </div>
           </div>
