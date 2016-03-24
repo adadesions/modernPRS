@@ -69,7 +69,7 @@ PhysicalForm = React.createClass({
     })
   },
 
-  render(){    
+  render(){
     return(
       <div style={physicalFormBG} className="physical-form">
         <div style={container}>

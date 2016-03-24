@@ -1,21 +1,19 @@
 let scroll = {
-  height: '3em'
-}
+    height: '3em'
+  },
+  scrollPain = {
+    overflowY: 'auto',
+    height: '92vh',
+    display: 'flex',
+    justifyContent: 'center'
+  },
+  container = {
+    width: '90%'
+  }
 
-let scrollPain = {
-  overflowY: 'auto',
-  height: '92vh',
-  display: 'flex',
-  justifyContent: 'center'
-}
 
-let container = {
-  width: '90%'
-}
 PainSectionInput = React.createClass({
-
-  componentDidMount(){
-
+  componentDidMount(){    
     $('#painScore').focus(function(){
       $('.patient-pain-section-box').addClass('box-key-press')
     }).blur(function () {
