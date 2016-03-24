@@ -20,11 +20,11 @@ Treatment = React.createClass({
         <div style={container}>
           <div className="input-field col s12">
             <textarea style={scroll} id="treatment" className="materialize-textarea"></textarea>
-            <label for="treatment">Treatment</label>
+            <label htmlFor="treatment">Treatment</label>
           </div>
           <div className="input-field col s12">
             <textarea style={scroll} id="note" className="materialize-textarea"></textarea>
-            <label for="note">Note</label>
+            <label htmlFor="note">Note</label>
           </div>
         </div>
       </div>

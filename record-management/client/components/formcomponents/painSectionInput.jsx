@@ -20,35 +20,35 @@ PainSectionInput = React.createClass({
         <div style={container}>
           <div className="input-field">
             <input id="painScore" type="text" className="validate"/>
-            <label for="painScore">Pain score</label>
+            <label htmlFor="painScore">Pain score</label>
           </div>
           <div className="input-field">
             <input id="typeOfPain" type="text" className="validate"/>
-            <label for="typeOfPain">Type of pain</label>
+            <label htmlFor="typeOfPain">Type of pain</label>
           </div>
           <div className="input-field">
             <input id="duration" type="text" className="validate"/>
-            <label for="duration">Duration</label>
+            <label htmlFor="duration">Duration</label>
           </div>
           <div className="input-field">
             <input id="agg" type="text" className="validate"/>
-            <label for="agg">Agg</label>
+            <label htmlFor="agg">Agg</label>
           </div>
           <div className="input-field">
             <input id="rest" type="text" className="validate"/>
-            <label for="rest">Rest</label>
+            <label htmlFor="rest">Rest</label>
           </div>
           <div className="input-field col s12">
             <textarea style={scroll} id="painLocation" className="materialize-textarea"></textarea>
-            <label for="painLocation">Pain Location</label>
+            <label htmlFor="painLocation">Pain Location</label>
           </div>
           <div className="input-field col s12">
             <textarea style={scroll} id="presentAndPastHistory" className="materialize-textarea"></textarea>
-            <label for="presentAndPastHistory">Present & Past History</label>
+            <label htmlFor="presentAndPastHistory">Present & Past History</label>
           </div>
           <div className="input-field col s12">
             <textarea style={scroll} id="assessment" className="materialize-textarea"></textarea>
-            <label for="assessment">Assessment</label>
+            <label htmlFor="assessment">Assessment</label>
           </div>
         </div>
       </div>

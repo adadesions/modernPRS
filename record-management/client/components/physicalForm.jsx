@@ -1,68 +1,58 @@
 let controlBar = {
-  backgroundColor: '#0098CF'
-}
-
-let center = {
-  display: 'flex',
-  justifyContent: 'center',
-  alignItem: 'center',
-}
-
-let paddingRightcol = {
-  padding: '2em',
-  webkitBoxShadow: '1px 0px 1px 0px rgba(0,0,0,0.5)',
-  mozBoxShadow: '1px 0px 1px 0px rgba(0,0,0,0.5)',
-  boxShadow: '1px 0px 1px 0px rgba(0,0,0,0.5)',
-  height: '100vh',
-}
-
-let paddingLeftCol = {
-  padding: '2em',
-  webkitBoxShadow: '1px 0px 1px 0px rgba(0,0,0,0.5)',
-  mozBoxShadow: '1px 0px 1px 0px rgba(0,0,0,0.5)',
-  boxShadow: '1px 0px 1px 0px rgba(0,0,0,0.5)',
-  height: '100vh',
-}
-
-let marginBottom = {
-  marginBottom: '0'
-}
-
-let physicalFormBG = {
-  backgroundColor: '#002331',
-  display: 'flex',
-  justifyContent: 'center'
-}
-
-let container = {
-  backgroundColor: '#fff',
-  width: '80%'
-}
-
-let marginRow = {
-  paddingTop: '5em'
-}
+    backgroundColor: '#0098CF'
+  },
+  center = {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItem: 'center',
+  },
+  paddingRightcol = {
+    padding: '2em',
+    WebkitBoxShadow: '1px 0px 1px 0px rgba(0,0,0,0.5)',
+    MozBoxShadow: '1px 0px 1px 0px rgba(0,0,0,0.5)',
+    boxShadow: '1px 0px 1px 0px rgba(0,0,0,0.5)',
+    height: '100vh',
+  },
+  paddingLeftCol = {
+    padding: '2em',
+    WebkitBoxShadow: '1px 0px 1px 0px rgba(0,0,0,0.5)',
+    MozBoxShadow: '1px 0px 1px 0px rgba(0,0,0,0.5)',
+    boxShadow: '1px 0px 1px 0px rgba(0,0,0,0.5)',
+    height: '100vh',
+  },
+  marginBottom = {
+    marginBottom: '0'
+  },
+  physicalFormBG = {
+    backgroundColor: '#002331',
+    display: 'flex',
+    justifyContent: 'center'
+  },
+  container = {
+    backgroundColor: '#fff',
+    width: '80%'
+  },
+  marginRow = {
+    paddingTop: '5em'
+  }
 
 PhysicalForm = React.createClass({
 
   componentDidMount(){
     (function($) {
-    "use strict"
-
-    var $navbar = $(".nav"),
-        y_pos = $navbar.offset().top,
-        height = $navbar.height()
-
+      "use strict"
+       var $navbar = $(".nav"),
+          y_pos = $navbar.offset().top,
+          height = $navbar.height()
     //scroll top 0 sticky
-    $(document).scroll(function() {
-        var scrollTop = $(this).scrollTop();
-        if (scrollTop > 0) {
-          $navbar.addClass("sticky");
-        } else {
-          $navbar.removeClass("sticky");
-        }
-    })
-
+        $(document).scroll(function() {
+            var scrollTop = $(this).scrollTop();
+            if (scrollTop > 0) {
+              $navbar.addClass("sticky");
+            } else {
+              $navbar.removeClass("sticky");
+            }
+        })
     //section sticky
     /*$(document).scroll(function() {
         var scrollTop = $(this).scrollTop();
@@ -72,7 +62,6 @@ PhysicalForm = React.createClass({
           $navbar.addClass("sticky");
         }
     });*/
-
     })(jQuery, undefined)
 
     $(".menu").click(function(){
