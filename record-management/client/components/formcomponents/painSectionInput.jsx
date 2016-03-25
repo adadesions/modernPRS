@@ -43,9 +43,7 @@ let scroll = {
     }
 
 PainSectionInput = React.createClass({
-
   componentDidMount(){
-
     $('#painScore').focus(function(){
       $('.patient-pain-section-box').addClass('box-key-press')
     }).blur(function () {
