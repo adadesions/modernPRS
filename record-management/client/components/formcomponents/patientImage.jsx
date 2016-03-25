@@ -1,14 +1,13 @@
 let patientImgFrame = {
-  width: '15em',
-  height: '15em',
-  display: 'flex',
-  justifyContent: 'center'
-}
-
-let patientImg = {
-  width: '13em',
-  height: '13em'
-}
+      width: '15em',
+      height: '15em',
+      display: 'flex',
+      justifyContent: 'center'
+    },
+    patientImg = {
+      width: '13em',
+      height: '13em'
+    }
 
 PatiendImage = React.createClass({
 

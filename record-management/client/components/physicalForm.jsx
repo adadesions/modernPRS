@@ -8,16 +8,16 @@ let controlBar = {
   },
   paddingRightcol = {
     padding: '2em',
-    WebkitBoxShadow: '1px 0px 1px 0px rgba(0,0,0,0.5)',
-    MozBoxShadow: '1px 0px 1px 0px rgba(0,0,0,0.5)',
-    boxShadow: '1px 0px 1px 0px rgba(0,0,0,0.5)',
+    WebkitBoxShadow: '1px 0px 1px 0px rgba(124,182,221,0.5)',
+    MozBoxShadow: '1px 0px 1px 0px rgba(124,182,221,0.5)',
+    boxShadow: '1px 0px 1px 0px rgba(124,182,221,0.5)',
     height: '100vh',
   },
   paddingLeftCol = {
     padding: '2em',
-    WebkitBoxShadow: '1px 0px 1px 0px rgba(0,0,0,0.5)',
-    MozBoxShadow: '1px 0px 1px 0px rgba(0,0,0,0.5)',
-    boxShadow: '1px 0px 1px 0px rgba(0,0,0,0.5)',
+    WebkitBoxShadow: '1px 0px 1px 0px rgba(124,182,221,0.5)',
+    MozBoxShadow: '1px 0px 1px 0px rgba(124,182,221,0.5)',
+    boxShadow: '1px 0px 1px 0px rgba(124,182,221,0.5)',
     height: '100vh',
   },
   marginBottom = {
@@ -97,10 +97,10 @@ PhysicalForm = React.createClass({
             </div>
           </div>
           <div className="row">
-            <div style={paddingLeftCol} className="col l7">
+            <div style={paddingLeftCol} className="col l6">
               <PatientOrgan />
             </div>
-            <div style={paddingRightcol} className="col l5">
+            <div style={paddingRightcol} className="col l6">
               <Treatment />
             </div>
           </div>

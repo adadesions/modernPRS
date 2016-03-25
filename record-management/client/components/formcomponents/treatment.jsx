@@ -1,17 +1,15 @@
 let scroll = {
-  height: '8em'
-}
-
-let scrollTreatment = {
-  overflowY: 'auto',
-  height: '95vh',
-  display: 'flex',
-  justifyContent: 'center'
-}
-
-let container = {
-  width: '90%'
-}
+      height: '8em'
+    },
+    scrollTreatment = {
+      overflowY: 'auto',
+      height: '95vh',
+      display: 'flex',
+      justifyContent: 'center'
+    },
+    container = {
+      width: '90%'
+    }
 Treatment = React.createClass({
 
   componentDidMount(){
