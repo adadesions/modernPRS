@@ -17,6 +17,7 @@ Patient = Astro.Class({
   name: 'Patients',
   collection: Patients,
   fields: {
+    opdNo: 'number',
     information: {
         firstname: {
           type: 'string',

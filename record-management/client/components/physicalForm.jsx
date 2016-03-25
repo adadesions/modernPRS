@@ -52,16 +52,7 @@ PhysicalForm = React.createClass({
             } else {
               $navbar.removeClass("sticky");
             }
-        })
-    //section sticky
-    /*$(document).scroll(function() {
-        var scrollTop = $(this).scrollTop();
-        if ($(window).height() > scrollTop) {
-          $navbar.removeClass("sticky");
-        } else {
-          $navbar.addClass("sticky");
-        }
-    });*/
+        })    
     })(jQuery, undefined)
 
     $(".menu").click(function(){
