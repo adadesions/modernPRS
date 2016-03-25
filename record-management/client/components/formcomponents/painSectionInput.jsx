@@ -105,94 +105,12 @@ PainSectionInput = React.createClass({
           <label style={fontSize}>Pain score</label>
             <div>
               <label style={subfontSize}>AROM</label>
-              <div style={ratingImg}>
-                <div  style={groupRating}>
-                  <img style={paddingImg} id="level1" src="/images/emoticon/level1.png"/>
-                  <h6>1</h6>
-                </div>
-                <div style={groupRating}>
-                  <img style={paddingImg} id="level2" src="/images/emoticon/level2.png"/>
-                  <h6>2</h6>
-                </div>
-                <div style={groupRating}>
-                  <img style={paddingImg} id="level3" src="/images/emoticon/level3.png"/>
-                  <h6>3</h6>
-                </div>
-                <div style={groupRating}>
-                  <img style={paddingImg} id="level4" src="/images/emoticon/level4.png"/>
-                  <h6>4</h6>
-                </div>
-                <div style={groupRating}>
-                  <img style={paddingImg} id="level5" src="/images/emoticon/level5.png"/>
-                  <h6>5</h6>
-                </div>
-                <div style={groupRating}>
-                  <img style={paddingImg} id="level6" src="/images/emoticon/level6.png"/>
-                  <h6>6</h6>
-                </div>
-                <div style={groupRating}>
-                  <img style={paddingImg} id="level7" src="/images/emoticon/level7.png"/>
-                  <h6>7</h6>
-                </div>
-                <div style={groupRating}>
-                  <img style={paddingImg} id="level8" src="/images/emoticon/level8.png"/>
-                  <h6>8</h6>
-                </div>
-                <div style={groupRating}>
-                  <img style={paddingImg} id="level9" src="/images/emoticon/level9.png"/>
-                  <h6>9</h6>
-                </div>
-                <div style={groupRating}>
-                  <img style={paddingImg} id="level10" src="/images/emoticon/level10.png"/>
-                  <h6>10</h6>
-                </div>
-              </div>
+              <RatingScale />
             </div>
             <div>
               <label style={subfontSize}>PROM</label>
-                <div style={ratingImg}>
-                  <div  style={groupRating}>
-                    <img style={paddingImg} id="level1" src="/images/emoticon/level1.png"/>
-                    <h6>1</h6>
-                  </div>
-                  <div style={groupRating}>
-                    <img style={paddingImg} id="level2" src="/images/emoticon/level2.png"/>
-                    <h6>2</h6>
-                  </div>
-                  <div style={groupRating}>
-                    <img style={paddingImg} id="level3" src="/images/emoticon/level3.png"/>
-                    <h6>3</h6>
-                  </div>
-                  <div style={groupRating}>
-                    <img style={paddingImg} id="level4" src="/images/emoticon/level4.png"/>
-                    <h6>4</h6>
-                  </div>
-                  <div style={groupRating}>
-                    <img style={paddingImg} id="level5" src="/images/emoticon/level5.png"/>
-                    <h6>5</h6>
-                  </div>
-                  <div style={groupRating}>
-                    <img style={paddingImg} id="level6" src="/images/emoticon/level6.png"/>
-                    <h6>6</h6>
-                  </div>
-                  <div style={groupRating}>
-                    <img style={paddingImg} id="level7" src="/images/emoticon/level7.png"/>
-                    <h6>7</h6>
-                  </div>
-                  <div style={groupRating}>
-                    <img style={paddingImg} id="level8" src="/images/emoticon/level8.png"/>
-                    <h6>8</h6>
-                  </div>
-                  <div style={groupRating}>
-                    <img style={paddingImg} id="level9" src="/images/emoticon/level9.png"/>
-                    <h6>9</h6>
-                  </div>
-                  <div style={groupRating}>
-                    <img style={paddingImg} id="level10" src="/images/emoticon/level10.png"/>
-                    <h6>10</h6>
-                  </div>
-                </div>
-            </div>
+              <RatingScale />
+            </div>          
             <div className="input-field">
               <select id="typeOfPain" defaultValue="topicTypeOfPain" className="icons">
                 <option value="topicTypeOfPain" disabled>Choose your option</option>

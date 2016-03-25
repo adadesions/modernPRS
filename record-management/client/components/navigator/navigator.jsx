@@ -6,9 +6,13 @@ Navigator = React.createClass({
         gender = $('#gender').val(),
         idCard = $('#idCard').val(),
         occupation = $('#occupation').val(),
-        age = $('#age'),val(),
+        age = $('#age').val(),
         emergencyCall = $('#emergencyCall').val(),
         tel = $('#tel').val(),
+        address = $('#address').val(),
+        chiefComplaint = $('#chiefComplaint').val(),
+        contraindication = $('#precautionAndContraindication').val(),
+        diagnosis = $('#diagnosis').val(),
         patient = new Patient()
     patient.set({
         information: {
