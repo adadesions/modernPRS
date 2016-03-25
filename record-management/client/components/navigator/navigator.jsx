@@ -1,5 +1,4 @@
 Navigator = React.createClass({
-
   render(){
     return(
       <div className="nav-prs">

@@ -28,6 +28,10 @@ PatientDetialLeft = React.createClass({
       $('.patient-detail-box').addClass('box-key-press')
     }).blur(function () {
       $('.patient-detail-box').removeClass('box-key-press')
+    }),
+
+    $(document).ready(function() {
+      $('select').material_select()
     })
   },
 
@@ -36,22 +40,23 @@ PatientDetialLeft = React.createClass({
       <div className="row">
         <div className="input-field">
           <input id="bod" type="date" className="datepicker"/>
-          <label htmlFor="bod">BOD</label>
+          <label htmlhtmlFor="bod">BOD</label>
         </div>
         <div className="input-field">
-          <select id="gender" className="browser-default">
-            <option value="" disabled selected>Gender ?</option>
-            <option value="1">Male</option>
-            <option value="2">Female</option>
+          <select defaultValue="0" id="gender">
+            <option value="0" disabled>Choose your option</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
           </select>
+          <label htmlhtmlFor="gender">Gender</label>
         </div>
         <div className="input-field">
           <input id="idCard" type="text" className="validate"/>
-          <label htmlFor="idCard">ID Card</label>
+          <label htmlhtmlFor="idCard">ID Card</label>
         </div>
         <div className="input-field">
           <input id="occupation" type="text" className="validate"/>
-          <label htmlFor="occupation">Occupation</label>
+          <label htmlhtmlFor="occupation">Occupation</label>
         </div>
       </div>
     )
