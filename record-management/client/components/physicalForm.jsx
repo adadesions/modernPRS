@@ -12,16 +12,29 @@ let controlBar = {
     MozBoxShadow: '1px 0px 1px 0px rgba(124,182,221,0.5)',
     boxShadow: '1px 0px 1px 0px rgba(124,182,221,0.5)',
     height: '100vh',
+    backgroundColor: '#fff',
+    borderRadius: '2px'
   },
   paddingLeftCol = {
     padding: '2em',
     WebkitBoxShadow: '1px 0px 1px 0px rgba(124,182,221,0.5)',
     MozBoxShadow: '1px 0px 1px 0px rgba(124,182,221,0.5)',
     boxShadow: '1px 0px 1px 0px rgba(124,182,221,0.5)',
+    borderRight: '1px solid rgba(124,182,221,0.5)',
     height: '100vh',
+    backgroundColor: '#fff',
+    borderRadius: '2px'
   },
-  marginBottom = {
-    marginBottom: '0'
+  paddingTable = {
+    paddingLeft: '2em',
+    paddingRight: '2em',
+    WebkitBoxShadow: '1px 0px 1px 0px rgba(124,182,221,0.5)',
+    MozBoxShadow: '1px 0px 1px 0px rgba(124,182,221,0.5)',
+    boxShadow: '1px 0px 1px 0px rgba(124,182,221,0.5)',
+    borderRight: '1px solid rgba(124,182,221,0.5)',
+    height: '100vh',
+    backgroundColor: '#fff',
+    borderRadius: '2px'
   },
   physicalFormBG = {
     backgroundColor: '#002331',
@@ -29,7 +42,7 @@ let controlBar = {
     justifyContent: 'center'
   },
   container = {
-    backgroundColor: '#fff',
+    backgroundColor: '#002331',
     width: '80%'
   },
   marginRow = {
@@ -52,7 +65,7 @@ PhysicalForm = React.createClass({
             } else {
               $navbar.removeClass("sticky");
             }
-        })    
+        })
     })(jQuery, undefined)
 
     $(".menu").click(function(){
@@ -67,7 +80,7 @@ PhysicalForm = React.createClass({
           <Navigator />
           <div style={marginRow} className="row">
             <div style={paddingLeftCol} className="col l6">
-              <div style={marginBottom} className="row">
+              <div className="row">
                 <div style={center} className="col l6">
                   <PatiendImage />
                 </div>
@@ -103,6 +116,51 @@ PhysicalForm = React.createClass({
             <div style={paddingRightcol} className="col l6">
               <Treatment />
             </div>
+          </div>
+          <div style={paddingTable} className="row">
+            <table className="striped">
+              <thead>
+                <tr>
+                    <th data-field="id">Subject</th>
+                    <th data-field="name">Object</th>
+                    <th data-field="price">Analysis</th>
+                    <th data-field="price">Plan</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>Test1</td>
+                  <td>Test1</td>
+                  <td>Test1</td>
+                  <td>Test1</td>
+                </tr>
+                <tr>
+                  <td>Test1</td>
+                  <td>Test1</td>
+                  <td>Test1</td>
+                  <td>Test1</td>
+                </tr>
+                <tr>
+                  <td>Test1</td>
+                  <td>Test1</td>
+                  <td>Test1</td>
+                  <td>Test1</td>
+                </tr>
+                <tr>
+                  <td>Test1</td>
+                  <td>Test1</td>
+                  <td>Test1</td>
+                  <td>Test1</td>
+                </tr>
+                <tr>
+                  <td>Test1</td>
+                  <td>Test1</td>
+                  <td>Test1</td>
+                  <td>Test1</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
