@@ -20,6 +20,11 @@ let center = {
       padding: '0.3em',
       width: '2.5em',
       height: '2.5em'
+    },
+    menuModel = {
+      position: 'absolute',
+  		right: '49em',
+  		bottom: '-50em'
     }
 
 PatientModel = React.createClass({
@@ -49,7 +54,68 @@ PatientModel = React.createClass({
   $('.pain-type-item').click(function(){
     $('.menu-model').addClass('hidden')
     $('.pain-type-item').addClass('hidden')
+  }),
+
+  $(".front-model").click(function(e) {
+
+    var offset = $(this).offset();
+    var relativeX = ((e.pageX - offset.left)/10)+10;
+    var relativeY = (-(e.pageY - offset.top)/10);
+
+    $('.fixed-action-btn.horizontal.click-to-toggle.menu-model').css('position','absolute')
+    $('.fixed-action-btn.horizontal.click-to-toggle.menu-model').css('right',relativeX+'em')
+    $('.fixed-action-btn.horizontal.click-to-toggle.menu-model').css('left',relativeX+'em')
+    $('.fixed-action-btn.horizontal.click-to-toggle.menu-model').css('bottom',relativeY+'em')
+
+    $('.menu-model').removeClass('hidden')
+    $('.pain-type-item').removeClass('hidden')
+  }),
+
+  $(".back-model").click(function(e) {
+
+    var offset = $(this).offset();
+    var relativeX = ((e.pageX - offset.left)/10)+20;
+    var relativeY = (-(e.pageY - offset.top)/10);
+
+    $('.fixed-action-btn.horizontal.click-to-toggle.menu-model').css('position','absolute')
+    $('.fixed-action-btn.horizontal.click-to-toggle.menu-model').css('right',relativeX+'em')
+    $('.fixed-action-btn.horizontal.click-to-toggle.menu-model').css('left',relativeX+'em')
+    $('.fixed-action-btn.horizontal.click-to-toggle.menu-model').css('bottom',relativeY+'em')
+
+    $('.menu-model').removeClass('hidden')
+    $('.pain-type-item').removeClass('hidden')
+  }),
+
+  $(".side-right-model").click(function(e) {
+
+    var offset = $(this).offset();
+    var relativeX = ((e.pageX - offset.left)/10)+10;
+    var relativeY = (-(e.pageY - offset.top)/10)-25;
+
+    $('.fixed-action-btn.horizontal.click-to-toggle.menu-model').css('position','absolute')
+    $('.fixed-action-btn.horizontal.click-to-toggle.menu-model').css('right',relativeX+'em')
+    $('.fixed-action-btn.horizontal.click-to-toggle.menu-model').css('left',relativeX+'em')
+    $('.fixed-action-btn.horizontal.click-to-toggle.menu-model').css('bottom',relativeY+'em')
+
+    $('.menu-model').removeClass('hidden')
+    $('.pain-type-item').removeClass('hidden')
+  }),
+
+  $(".side-left-model").click(function(e) {
+
+    var offset = $(this).offset();
+    var relativeX = ((e.pageX - offset.left)/10)+30;
+    var relativeY = (-(e.pageY - offset.top)/10)-25;
+
+    $('.fixed-action-btn.horizontal.click-to-toggle.menu-model').css('position','absolute')
+    $('.fixed-action-btn.horizontal.click-to-toggle.menu-model').css('right',relativeX+'em')
+    $('.fixed-action-btn.horizontal.click-to-toggle.menu-model').css('left',relativeX+'em')
+    $('.fixed-action-btn.horizontal.click-to-toggle.menu-model').css('bottom',relativeY+'em')
+
+    $('.menu-model').removeClass('hidden')
+    $('.pain-type-item').removeClass('hidden')
   })
+
   },
 
   render(){
@@ -71,7 +137,7 @@ PatientModel = React.createClass({
             <img style={sizeImageside} src="/images/body-left.png"/>
           </div>
         </div>
-        <div className="fixed-action-btn horizontal click-to-toggle menu-model hidden">
+        <div style={menuModel} className="fixed-action-btn horizontal click-to-toggle menu-model hidden">
           <a className="btn-floating btn-large red">
             <i className="large mdi-navigation-menu"></i>
           </a>
