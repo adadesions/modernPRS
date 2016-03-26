@@ -104,13 +104,13 @@ PainSectionInput = React.createClass({
         <div style={container}>
           <label style={fontSize}>Pain score</label>
             <div>
-              <label style={subfontSize}>AROM</label>
-              <RatingScale />
+              <label name='arom-label' style={subfontSize}>AROM</label>
+              <RatingScale name='arom'/>
             </div>
             <div>
-              <label style={subfontSize}>PROM</label>
-              <RatingScale />
-            </div>          
+              <label name='prom-label' style={subfontSize}>PROM</label>
+              <RatingScale name='prom'/>
+            </div>
             <div className="input-field">
               <select id="typeOfPain" defaultValue="topicTypeOfPain" className="icons">
                 <option value="topicTypeOfPain" disabled>Choose your option</option>
