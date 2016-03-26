@@ -118,7 +118,7 @@ PhysicalForm = React.createClass({
             </div>
           </div>
           <div style={paddingTable} className="row">
-            <table className="striped">
+            <table className="striped centered">
               <thead>
                 <tr>
                     <th data-field="id">Subject</th>

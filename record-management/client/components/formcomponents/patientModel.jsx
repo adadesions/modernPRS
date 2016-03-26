@@ -56,6 +56,7 @@ PatientModel = React.createClass({
     $('.pain-type-item').addClass('hidden')
   }),
 
+
   $(".front-model").click(function(e) {
 
     var offset = $(this).offset();
@@ -66,6 +67,8 @@ PatientModel = React.createClass({
     $('.fixed-action-btn.horizontal.click-to-toggle.menu-model').css('right',relativeX+'em')
     $('.fixed-action-btn.horizontal.click-to-toggle.menu-model').css('left',relativeX+'em')
     $('.fixed-action-btn.horizontal.click-to-toggle.menu-model').css('bottom',relativeY+'em')
+
+    $('.fixed-action-btn.horizontal.click-to-toggle.menu-model').openFAB();
 
     $('.menu-model').removeClass('hidden')
     $('.pain-type-item').removeClass('hidden')
@@ -82,6 +85,8 @@ PatientModel = React.createClass({
     $('.fixed-action-btn.horizontal.click-to-toggle.menu-model').css('left',relativeX+'em')
     $('.fixed-action-btn.horizontal.click-to-toggle.menu-model').css('bottom',relativeY+'em')
 
+    $('.fixed-action-btn.horizontal.click-to-toggle.menu-model').openFAB();
+
     $('.menu-model').removeClass('hidden')
     $('.pain-type-item').removeClass('hidden')
   }),
@@ -97,6 +102,8 @@ PatientModel = React.createClass({
     $('.fixed-action-btn.horizontal.click-to-toggle.menu-model').css('left',relativeX+'em')
     $('.fixed-action-btn.horizontal.click-to-toggle.menu-model').css('bottom',relativeY+'em')
 
+    $('.fixed-action-btn.horizontal.click-to-toggle.menu-model').openFAB();
+
     $('.menu-model').removeClass('hidden')
     $('.pain-type-item').removeClass('hidden')
   }),
@@ -111,6 +118,8 @@ PatientModel = React.createClass({
     $('.fixed-action-btn.horizontal.click-to-toggle.menu-model').css('right',relativeX+'em')
     $('.fixed-action-btn.horizontal.click-to-toggle.menu-model').css('left',relativeX+'em')
     $('.fixed-action-btn.horizontal.click-to-toggle.menu-model').css('bottom',relativeY+'em')
+
+    $('.fixed-action-btn.horizontal.click-to-toggle.menu-model').openFAB();
 
     $('.menu-model').removeClass('hidden')
     $('.pain-type-item').removeClass('hidden')

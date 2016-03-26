@@ -29,6 +29,8 @@ PatientOrgan = React.createClass({
       $('.fixed-action-btn.horizontal.click-to-toggle.menu-organ').css('left',relativeX+'em')
       $('.fixed-action-btn.horizontal.click-to-toggle.menu-organ').css('bottom',relativeY+'em')
 
+      $('.fixed-action-btn.horizontal.click-to-toggle.menu-organ').openFAB();
+
       $('.menu-organ').removeClass('hidden')
       $('.organ-pain-type-item').removeClass('hidden')
     })
