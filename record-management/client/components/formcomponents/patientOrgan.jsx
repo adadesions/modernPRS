@@ -6,18 +6,31 @@ let marginLeft = {
       width: 'auto'
     }
 
+
+
+
 PatientOrgan = React.createClass({
 
   componentDidMount(){
 
-    $('.organ-model').click(function(){
-      $('.menu-organ').removeClass('hidden')
-      $('.organ-pain-type-item').removeClass('hidden')
-    }),
-
     $('.organ-pain-type-item').click(function(){
       $('.menu-organ').addClass('hidden')
       $('.organ-pain-type-item').addClass('hidden')
+    }),
+
+    $(".organ-model").click(function(e) {
+
+      var offset = $(this).offset();
+      var relativeX = (e.pageX - offset.left)/10;
+      var relativeY = (-(e.pageY - offset.top)/10)-80;
+
+      $('.fixed-action-btn.horizontal.click-to-toggle.menu-organ').css('position','absolute')
+      $('.fixed-action-btn.horizontal.click-to-toggle.menu-organ').css('right',relativeX+'em')
+      $('.fixed-action-btn.horizontal.click-to-toggle.menu-organ').css('left',relativeX+'em')
+      $('.fixed-action-btn.horizontal.click-to-toggle.menu-organ').css('bottom',relativeY+'em')
+
+      $('.menu-organ').removeClass('hidden')
+      $('.organ-pain-type-item').removeClass('hidden')
     })
 
   },
