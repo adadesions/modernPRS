@@ -1,5 +1,5 @@
 PatientDetialLeft = React.createClass({
-
+  
   componentDidMount(){
     $('.datepicker').pickadate({
       selectMonths: true, // Creates a dropdown to control month
@@ -39,24 +39,23 @@ PatientDetialLeft = React.createClass({
     return(
       <div className="row">
         <div className="input-field">
-          <input id="bod" type="date" className="datepicker"/>
-          <label htmlhtmlFor="bod">BOD</label>
+          <input id="bod" type="text" className="datepicker"/>
+          <label htmlFor="bod">BOD</label>
         </div>
         <div className="input-field">
-          <select defaultValue="0" id="gender">
-            <option value="0" disabled>Choose your option</option>
+          <select defaultValue="male" id="gender">
             <option value="male">Male</option>
             <option value="female">Female</option>
           </select>
-          <label htmlhtmlFor="gender">Gender</label>
+          <label htmlFor="gender">Gender</label>
         </div>
         <div className="input-field">
           <input id="idCard" type="text" className="validate"/>
-          <label htmlhtmlFor="idCard">ID Card</label>
+          <label htmlFor="idCard">ID Card</label>
         </div>
         <div className="input-field">
           <input id="occupation" type="text" className="validate"/>
-          <label htmlhtmlFor="occupation">Occupation</label>
+          <label htmlFor="occupation">Occupation</label>
         </div>
       </div>
     )

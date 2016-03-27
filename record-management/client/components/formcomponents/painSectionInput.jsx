@@ -129,32 +129,32 @@ PainSectionInput = React.createClass({
                 <option value="incisionLine" data-icon="images/typeofpain/incision-line.png" className="left circle">Incision Line</option>
                 <option value="other" data-icon="images/typeofpain/other.png" className="left circle">Other</option>
               </select>
-              <label htmlhtmlFor="typeOfPain">Type Of Pain</label>
+              <label htmlFor="typeOfPain">Type Of Pain</label>
             </div>
-          <label style={fontSize} htmlhtmlFor="duration">Duration</label>
+          <label style={fontSize} htmlFor="duration">Duration</label>
           <p className="range-field">
             <input type="range" id="duration" defaultValue="0" min="0" max="60" onChange={this.durationChange} />
             <input style={sizeInput} type="text" id="input-range" defaultValue="0" className="validate"/>
           </p>
           <div className="input-field">
             <input id="agg" type="text" className="validate"/>
-            <label htmlhtmlFor="agg">Agg</label>
+            <label htmlFor="agg">Agg</label>
           </div>
           <div className="input-field">
             <input id="rest" type="text" className="validate"/>
-            <label htmlhtmlFor="rest">Rest</label>
+            <label htmlFor="rest">Rest</label>
           </div>
           <div className="input-field col s12">
             <textarea style={scroll} id="painLocation" className="materialize-textarea"></textarea>
-            <label htmlhtmlFor="painLocation">Pain Location</label>
+            <label htmlFor="painLocation">Pain Location</label>
           </div>
           <div className="input-field col s12">
             <textarea style={scroll} id="presentAndPastHistory" className="materialize-textarea"></textarea>
-            <label htmlhtmlFor="presentAndPastHistory">Present & Past History</label>
+            <label htmlFor="presentAndPastHistory">Present & Past History</label>
           </div>
           <div className="input-field col s12">
             <textarea style={scroll} id="assessment" className="materialize-textarea"></textarea>
-            <label htmlhtmlFor="assessment">Assessment</label>
+            <label htmlFor="assessment">Assessment</label>
           </div>
         </div>
       </div>

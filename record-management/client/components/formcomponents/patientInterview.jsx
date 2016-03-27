@@ -41,11 +41,11 @@ PatientInterview = React.createClass({
       <div id="style-1" style={scrollInterview} className="row patient-interview-box">
         <div className="input-field col s12">
           <textarea style={scroll} id="address" className="materialize-textarea"></textarea>
-          <label htmlhtmlFor="address">Address</label>
+          <label htmlFor="address">Address</label>
         </div>
         <div className="input-field col s12">
           <textarea style={scroll} id="chiefComplaint" className="materialize-textarea"></textarea>
-          <label htmlhtmlFor="chiefComplaint">Chief Complaint</label>
+          <label htmlFor="chiefComplaint">Chief Complaint</label>
         </div>
         <div className="input-field col s12">
           <textarea style={scroll} id="precautionAndContraindication" className="materialize-textarea"></textarea>
@@ -53,7 +53,7 @@ PatientInterview = React.createClass({
         </div>
         <div className="input-field col s12">
           <textarea style={scroll} id="diagnosis" className="materialize-textarea"></textarea>
-          <label htmlhtmlFor="diagnosis">Diagnosis</label>
+          <label htmlFor="diagnosis">Diagnosis</label>
         </div>
       </div>
     )

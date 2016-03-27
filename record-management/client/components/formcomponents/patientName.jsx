@@ -27,11 +27,11 @@ PatientName = React.createClass({
       <div className="row">
         <div className="input-field">
           <input id="firstname" type="text" className="validate"/>
-          <label htmlhtmlFor="firstname">Firstname</label>
+          <label htmlFor="firstname">Firstname</label>
         </div>
         <div className="input-field">
           <input id="lastname" type="text" className="validate"/>
-          <label htmlhtmlFor="lastname">Lastname</label>
+          <label htmlFor="lastname">Lastname</label>
         </div>
       </div>
     )

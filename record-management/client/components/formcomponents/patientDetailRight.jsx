@@ -1,4 +1,43 @@
 PatientDetialRight = React.createClass({
+  onClickAge() {
+      const months = [
+          "January",
+          "February",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July",
+          "August",
+          "September",
+          "October",
+          "November",
+          "December",
+      ]
+      const monthToNumber = (month) => {
+          return months.findIndex( (m,i) => {
+              return month === m
+          })
+      }
+      let bodValue = $('#bod').val().split(','),
+          daynMonth = bodValue[0].split(' '),
+          patientDay = daynMonth[0].trim(),
+          patientMonth = monthToNumber(daynMonth[1].trim()),
+          patientYear = bodValue[1].trim(),
+          now = new Date(),
+          currentDay = now.getDate(),
+          currentYear = now.getFullYear(),
+          currentMonth = now.getMonth(),
+          patientAge = currentYear-patientYear
+
+      if(patientMonth >= currentMonth){
+        if(patientDay < currentDay){
+          patientAge--
+      }
+    }
+    //Display on age input    
+    $('#age').val(patientAge)
+  },
 
   componentDidMount(){
 
@@ -26,16 +65,16 @@ PatientDetialRight = React.createClass({
     return(
       <div className="row">
         <div className="input-field">
-          <input id="age" type="text" className="validate"/>
-          <label htmlhtmlFor="age">Age</label>
+          <input id="age" type="text" className="validate" onClick={this.onClickAge}/>
+          <label htmlFor="age">Age</label>
         </div>
         <div className="input-field">
           <input id="emergencyCall" type="text" className="validate"/>
-          <label htmlhtmlFor="emergencyCall">Emergency call</label>
+          <label htmlFor="emergencyCall">Emergency call</label>
         </div>
         <div className="input-field">
           <input id="tel" type="text" className="validate"/>
-          <label htmlhtmlFor="tel">Tel.</label>
+          <label htmlFor="tel">Tel.</label>
         </div>
       </div>
     )
