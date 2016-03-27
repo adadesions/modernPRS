@@ -13,23 +13,21 @@ let scroll = {
 Treatment = React.createClass({
 
   componentDidMount(){
+      $('#treatment').focus(function(){
+        $('.patient-treatment-box').addClass('box-key-press')
+      }).blur(function () {
+        $('.patient-treatment-box').removeClass('box-key-press')
+      }),
 
-    $('#treatment').focus(function(){
-      $('.patient-treatment-box').addClass('box-key-press')
-    }).blur(function () {
-      $('.patient-treatment-box').removeClass('box-key-press')
-    }),
+      $('#note').focus(function(){
+        $('.patient-treatment-box').addClass('box-key-press')
+      }).blur(function () {
+        $('.patient-treatment-box').removeClass('box-key-press')
+      }),
 
-    $('#note').focus(function(){
-      $('.patient-treatment-box').addClass('box-key-press')
-    }).blur(function () {
-      $('.patient-treatment-box').removeClass('box-key-press')
-    }),
-
-    $(document).ready(function() {
-    $('select').material_select();
-  });
-
+      $(document).ready(function() {
+        $('select').material_select();
+      });
   },
 
   render(){
@@ -37,7 +35,11 @@ Treatment = React.createClass({
       <div id="style-1" style={scrollTreatment} className="row patient-treatment-box">
         <div style={container}>
           <div className="input-field col s12">
-            <select defaultValue="defult" multiple>
+            <textarea style={scroll} id="assessment" className="materialize-textarea"></textarea>
+            <label htmlFor="assessment">Assessment</label>
+          </div>
+          <div className="input-field col s12">
+            <select defaultValue="defult">
               <option value="defult" disabled>Choose your option</option>
               <optgroup label="Hydro Therapy Equipment">
                 <option value="hydrotheraryTank">HYDROTHERAPY TANK</option>

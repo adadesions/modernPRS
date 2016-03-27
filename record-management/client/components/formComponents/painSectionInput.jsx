@@ -47,64 +47,63 @@ let scroll = {
 
 PainSectionInput = React.createClass({
   componentDidMount(){
-    $('#painScore').focus(function(){
-      $('.patient-pain-section-box').addClass('box-key-press')
-    }).blur(function () {
-      $('.patient-pain-section-box').removeClass('box-key-press')
-    }),
+      $('#painScore').focus(function(){
+        $('.patient-pain-section-box').addClass('box-key-press')
+      }).blur(function () {
+        $('.patient-pain-section-box').removeClass('box-key-press')
+      }),
 
-    $('#typeOfPain').focus(function(){
-      $('.patient-pain-section-box').addClass('box-key-press')
-    }).blur(function () {
-      $('.patient-pain-section-box').removeClass('box-key-press')
-    }),
+      $('#typeOfPain').focus(function(){
+        $('.patient-pain-section-box').addClass('box-key-press')
+      }).blur(function () {
+        $('.patient-pain-section-box').removeClass('box-key-press')
+      }),
 
-    $('#duration').focus(function(){
-      $('.patient-pain-section-box').addClass('box-key-press')
-    }).blur(function () {
-      $('.patient-pain-section-box').removeClass('box-key-press')
-    }),
+      $('#duration').focus(function(){
+        $('.patient-pain-section-box').addClass('box-key-press')
+      }).blur(function () {
+        $('.patient-pain-section-box').removeClass('box-key-press')
+      }),
 
-    $('#agg').focus(function(){
-      $('.patient-pain-section-box').addClass('box-key-press')
-    }).blur(function () {
-      $('.patient-pain-section-box').removeClass('box-key-press')
-    }),
+      $('#agg').focus(function(){
+        $('.patient-pain-section-box').addClass('box-key-press')
+      }).blur(function () {
+        $('.patient-pain-section-box').removeClass('box-key-press')
+      }),
 
-    $('#rest').focus(function(){
-      $('.patient-pain-section-box').addClass('box-key-press')
-    }).blur(function () {
-      $('.patient-pain-section-box').removeClass('box-key-press')
-    }),
+      $('#rest').focus(function(){
+        $('.patient-pain-section-box').addClass('box-key-press')
+      }).blur(function () {
+        $('.patient-pain-section-box').removeClass('box-key-press')
+      }),
 
-    $('#painLocation').focus(function(){
-      $('.patient-pain-section-box').addClass('box-key-press')
-    }).blur(function () {
-      $('.patient-pain-section-box').removeClass('box-key-press')
-    }),
+      $('#painLocation').focus(function(){
+        $('.patient-pain-section-box').addClass('box-key-press')
+      }).blur(function () {
+        $('.patient-pain-section-box').removeClass('box-key-press')
+      }),
 
-    $('#presentAndPastHistory').focus(function(){
-      $('.patient-pain-section-box').addClass('box-key-press')
-    }).blur(function () {
-      $('.patient-pain-section-box').removeClass('box-key-press')
-    }),
+      $('#presentAndPastHistory').focus(function(){
+        $('.patient-pain-section-box').addClass('box-key-press')
+      }).blur(function () {
+        $('.patient-pain-section-box').removeClass('box-key-press')
+      }),
 
-    $('#assessment').focus(function(){
-      $('.patient-pain-section-box').addClass('box-key-press')
-    }).blur(function () {
-      $('.patient-pain-section-box').removeClass('box-key-press')
-    }),
+      $('#assessment').focus(function(){
+        $('.patient-pain-section-box').addClass('box-key-press')
+      }).blur(function () {
+        $('.patient-pain-section-box').removeClass('box-key-press')
+      }),
 
-    $(document).ready(function() {
-      $('select').material_select()
-    })
-
+      $(document).ready(function() {
+        $('select').material_select()
+      })
   },
 
   durationChange() {
-    let value = $('#duration').val()
-    //Update input-range
-    $('#input-range').val(value)
+      let value = $('#duration').val()
+      //Update input-range
+      $('#input-range').val(value)
   },
 
   render(){
@@ -156,12 +155,7 @@ PainSectionInput = React.createClass({
           <label>Present & Past History</label>
           <div style={borderBox} className="input-field col s12">
             <PresentAndPastHistory />
-          </div>
-            <PresentAndPastHistoryItems />
-          <div className="input-field col s12">
-            <textarea style={scroll} id="assessment" className="materialize-textarea"></textarea>
-            <label htmlFor="assessment">Assessment</label>
-          </div>
+          </div>                      
         </div>
       </div>
     )
