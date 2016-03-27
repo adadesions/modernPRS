@@ -73,7 +73,7 @@ Treatment = React.createClass({
           </div>
           <div className="input-field col s12">
             <textarea style={scroll} id="note" className="materialize-textarea"></textarea>
-            <label htmlhtmlFor="note">Note</label>
+            <label htmlFor="note">Note</label>
           </div>
         </div>
       </div>

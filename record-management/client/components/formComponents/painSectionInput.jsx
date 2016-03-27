@@ -3,9 +3,7 @@ let scroll = {
     },
     scrollPain = {
       overflowY: 'auto',
-      height: '92vh',
-      display: 'flex',
-      justifyContent: 'center'
+      height: '92vh'
     },
     container = {
       width: '90%'
@@ -40,6 +38,11 @@ let scroll = {
       padding: '0.3em',
       width: '2.5em',
       height: '2.5em'
+    },
+    borderBox = {
+      padding:'1em',
+      borderRadius: '2px',
+      border: '1px solid rgba(124,182,221,0.5)'
     }
 
 PainSectionInput = React.createClass({
@@ -98,18 +101,24 @@ PainSectionInput = React.createClass({
 
   },
 
+  durationChange() {
+    let value = $('#duration').val()
+    //Update input-range
+    $('#input-range').val(value)
+  },
+
   render(){
     return(
       <div id="style-1" style={scrollPain} className="row patient-pain-section-box">
         <div style={container}>
           <label style={fontSize}>Pain score</label>
             <div>
-              <label style={subfontSize}>AROM</label>
-              <RatingScale />
+              <label name='arom-label' style={subfontSize}>AROM</label>
+              <RatingScale name='arom'/>
             </div>
             <div>
-              <label style={subfontSize}>PROM</label>
-              <RatingScale />
+              <label name='prom-label' style={subfontSize}>PROM</label>
+              <RatingScale name='prom'/>
             </div>
             <div className="input-field">
               <select id="typeOfPain" defaultValue="topicTypeOfPain" className="icons">
@@ -125,32 +134,33 @@ PainSectionInput = React.createClass({
                 <option value="burning" className="left circle">Burning</option>
                 <option value="prickling" className="left circle">Prickling</option>
               </select>
-              <label htmlhtmlFor="typeOfPain">Type Of Pain</label>
+              <label htmlFor="typeOfPain">Type Of Pain</label>
             </div>
-          <label style={fontSize} htmlhtmlFor="duration">Duration</label>
+          <label style={fontSize} htmlFor="duration">Duration</label>
           <p className="range-field">
-            <input type="range" id="duration" min="0" max="300" />
+            <input type="range" id="duration" defaultValue="0" min="0" max="60" onChange={this.durationChange} />
             <input style={sizeInput} type="text" id="input-range" defaultValue="0" className="validate"/>
           </p>
           <div className="input-field">
             <input id="agg" type="text" className="validate"/>
-            <label htmlhtmlFor="agg">Agg</label>
+            <label htmlFor="agg">Agg</label>
           </div>
           <div className="input-field">
             <input id="rest" type="text" className="validate"/>
-            <label htmlhtmlFor="rest">Rest</label>
+            <label htmlFor="rest">Rest</label>
           </div>
           <div className="input-field col s12">
             <textarea style={scroll} id="painLocation" className="materialize-textarea"></textarea>
-            <label htmlhtmlFor="painLocation">Pain Location</label>
+            <label htmlFor="painLocation">Pain Location</label>
           </div>
-          <div className="input-field col s12">
-            <textarea style={scroll} id="presentAndPastHistory" className="materialize-textarea"></textarea>
-            <label htmlhtmlFor="presentAndPastHistory">Present & Past History</label>
+          <label>Present & Past History</label>
+          <div style={borderBox} className="input-field col s12">
+            <PresentAndPastHistory />
           </div>
+            <PresentAndPastHistoryItems />
           <div className="input-field col s12">
             <textarea style={scroll} id="assessment" className="materialize-textarea"></textarea>
-            <label htmlhtmlFor="assessment">Assessment</label>
+            <label htmlFor="assessment">Assessment</label>
           </div>
         </div>
       </div>

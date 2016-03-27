@@ -77,7 +77,7 @@ PhysicalForm = React.createClass({
     return(
       <div style={physicalFormBG} className="physical-form">
         <div style={container}>
-          <Navigator />
+          <FormToolsBar />
           <div style={marginRow} className="row">
             <div style={paddingLeftCol} className="col l6">
               <div className="row">
