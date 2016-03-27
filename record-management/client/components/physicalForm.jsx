@@ -4,13 +4,10 @@ let controlBar = {
   center = {
     display: 'flex',
     justifyContent: 'center',
-    alignItem: 'center',
+    alignItem: 'center'
   },
   paddingRightcol = {
     padding: '2em',
-    WebkitBoxShadow: '1px 0px 1px 0px rgba(124,182,221,0.5)',
-    MozBoxShadow: '1px 0px 1px 0px rgba(124,182,221,0.5)',
-    boxShadow: '1px 0px 1px 0px rgba(124,182,221,0.5)',
     height: '100vh',
     backgroundColor: '#fff',
     borderRadius: '2px'
@@ -28,25 +25,32 @@ let controlBar = {
   paddingTable = {
     paddingLeft: '2em',
     paddingRight: '2em',
-    WebkitBoxShadow: '1px 0px 1px 0px rgba(124,182,221,0.5)',
-    MozBoxShadow: '1px 0px 1px 0px rgba(124,182,221,0.5)',
-    boxShadow: '1px 0px 1px 0px rgba(124,182,221,0.5)',
-    borderRight: '1px solid rgba(124,182,221,0.5)',
     height: '100vh',
     backgroundColor: '#fff',
     borderRadius: '2px'
   },
   physicalFormBG = {
-    backgroundColor: '#002331',
+    backgroundColor: '#eeeeee',
     display: 'flex',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    marginLeft: 'auto',
+    marginRight: 'auto'
   },
   container = {
-    backgroundColor: '#002331',
-    width: '80%'
+    width: '80%',
+    zIndex: '+1000'
   },
   marginRow = {
-    paddingTop: '4.4em'
+    marginTop: '10em'
+  },
+  sizeImage = {
+    width: '100%',
+    height: '90%',
+    position: 'absolute',
+    left: '0',
+    WebkitBoxShadow: '0px 0px 50px 0px rgba(0,0,0,0.8)',
+    MozBoxShadow: '0px 0px 50px 0px rgba(0,0,0,0.8)',
+    boxShadow: '0px 0px 50px 0px rgba(0,0,0,0.8)'
   }
 
 PhysicalForm = React.createClass({
@@ -76,9 +80,12 @@ PhysicalForm = React.createClass({
   render(){
     return(
       <div style={physicalFormBG} className="physical-form">
+        <div className="coverPhysical">
+          <img style={sizeImage} src="/images/cover/cover.jpg"/>
+        </div>
         <div style={container}>
           <FormToolsBar />
-          <div style={marginRow} className="row">
+          <div style={marginRow} className="row z-depth-1">
             <div style={paddingLeftCol} className="col l6">
               <div className="row">
                 <div style={center} className="col l6">
@@ -101,7 +108,7 @@ PhysicalForm = React.createClass({
               <PatientInterview />
             </div>
           </div>
-          <div className="row">
+          <div className="row z-depth-1">
             <div style={paddingLeftCol} className="col l6">
               <PatientModel />
             </div>
@@ -109,7 +116,7 @@ PhysicalForm = React.createClass({
               <PainSectionInput />
             </div>
           </div>
-          <div className="row">
+          <div className="row z-depth-1">
             <div style={paddingLeftCol} className="col l6">
               <PatientOrgan />
             </div>
@@ -117,7 +124,7 @@ PhysicalForm = React.createClass({
               <Treatment />
             </div>
           </div>
-          <div style={paddingTable} className="row">
+          <div style={paddingTable} className="row z-depth-1">
             <ProgressionNote />
           </div>
         </div>

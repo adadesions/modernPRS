@@ -1,23 +1,24 @@
 let sizeTextbox = {
-      width: '10em',
-      backgroundColor: '#26A69A',
+      width: '15em',
       marginLeft: '1em',
       borderRadius: '2px',
-      color: '#fff',
+      color: '#0288d1',
       display: 'flex',
       alignItems: 'center',
       flexFlow: 'row',
       height: '3.2em',
-      paddingRight: '0.4em'
+      paddingRight: '2em',
+      border: '1px solid #0288d1'
     },
     labelColor = {
-      color: '#fff',
+      color: '#0288d1',
       fontWeight: 'bold',
       fontFamily: 'Quark-LightBold , verdana, helvetica, sans-serif',
-      paddingLeft: '0.4em'
+      paddingLeft: '2em'
     },
     inputPosition = {
-      marginTop: '0.8em'
+      marginTop: '0.8em',
+      marginLeft: '1em',
     }
 
 FormToolsBar = React.createClass({
@@ -100,7 +101,7 @@ FormToolsBar = React.createClass({
                 <li>
                     <a
                       id="save-btn"
-                      className="waves-effect waves-light btn"
+                      className="waves-effect waves-light btn green accent-4"
                       onClick={this.onClickSave}
                     >
                     Save
@@ -109,7 +110,7 @@ FormToolsBar = React.createClass({
                 <li>
                     <a
                       id="cancle-btn"
-                      className="waves-effect waves-light btn"
+                      className="waves-effect waves-light btn red accent-4"
                     >
                       Cancle
                     </a>
