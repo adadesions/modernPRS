@@ -110,24 +110,26 @@ PainSectionInput = React.createClass({
             <div>
               <label style={subfontSize}>PROM</label>
               <RatingScale />
-            </div>          
+            </div>
             <div className="input-field">
               <select id="typeOfPain" defaultValue="topicTypeOfPain" className="icons">
                 <option value="topicTypeOfPain" disabled>Choose your option</option>
-                <option value="pain" data-icon="images/typeofpain/pain.png" className="left circle">Pain</option>
-                <option value="referedPain" data-icon="images/typeofpain/refered-line.png" className="left circle">Referred Pain</option>
-                <option value="numbless" data-icon="images/typeofpain/numbless.png" className="left circle">Numbless</option>
-                <option value="subluxation" data-icon="images/typeofpain/subluxation.png" className="left circle">Subluxation</option>
-                <option value="tightness" data-icon="images/typeofpain/tighness.png" className="left circle">Tightness</option>
-                <option value="weakness" data-icon="images/typeofpain/weakness.png" className="left circle">Weakness</option>
-                <option value="incisionLine" data-icon="images/typeofpain/incision-line.png" className="left circle">Incision Line</option>
-                <option value="other" data-icon="images/typeofpain/other.png" className="left circle">Other</option>
+                <option value="sharpPain" className="left circle">Sharp pain</option>
+                <option value="deepDullPain" className="left circle">Deep Dull Pain</option>
+                <option value="shinglesPain" className="left circle">Shingles Pain</option>
+                <option value="sciaticaPain" className="left circle">Sciatica Pain</option>
+                <option value="burningPain" className="left circle">Burning Pain</option>
+                <option value="neuropathicPain" className="left circle">Neuropathic Pain</option>
+                <option value="stabbingPain" className="left circle">Stabbing Pain</option>
+                <option value="throbbingPain" className="left circle">Throbbing Pain</option>
+                <option value="burning" className="left circle">Burning</option>
+                <option value="prickling" className="left circle">Prickling</option>
               </select>
               <label htmlhtmlFor="typeOfPain">Type Of Pain</label>
             </div>
           <label style={fontSize} htmlhtmlFor="duration">Duration</label>
           <p className="range-field">
-            <input type="range" id="duration" defaultValue="0" min="0" max="300" />
+            <input type="range" id="duration" min="0" max="300" />
             <input style={sizeInput} type="text" id="input-range" defaultValue="0" className="validate"/>
           </p>
           <div className="input-field">

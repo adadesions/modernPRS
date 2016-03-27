@@ -1,8 +1,8 @@
 let center = {
       display: 'flex',
       justifyContent: 'center',
-      alignItems: 'center',
-      flexFlow: 'column'
+      flexFlow: 'column',
+      marginTop: '-1em'
     },
     sizeImage = {
       width: '10em',
@@ -61,7 +61,8 @@ PatientModel = React.createClass({
 
     var offset = $(this).offset();
     var relativeX = ((e.pageX - offset.left)/10)+10;
-    var relativeY = (-(e.pageY - offset.top)/10);
+    var relativeY = (-(e.pageY - offset.top)/10)-10;
+    var relativeYTop = ((e.pageY - offset.top)/10)+10;
 
     $('.fixed-action-btn.horizontal.click-to-toggle.menu-model').css('position','absolute')
     $('.fixed-action-btn.horizontal.click-to-toggle.menu-model').css('right',relativeX+'em')
