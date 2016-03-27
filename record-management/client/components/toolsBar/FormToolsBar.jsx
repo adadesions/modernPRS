@@ -1,3 +1,23 @@
+let sizeTextbox = {
+      width: '10em',
+      backgroundColor: '#26A69A',
+      marginLeft: '1em',
+      borderRadius: '2px',
+      color: '#fff',
+      display: 'flex',
+      alignItems: 'center',
+      flexFlow: 'row',
+      height: '3.2em'
+    },
+    labelColor = {
+      color: '#fff',
+      fontWeight: 'bold',
+      fontFamily: 'Quark-LightBold , verdana, helvetica, sans-serif'
+    },
+    inputPosition = {
+      marginTop: '0.8em'
+    }
+
 FormToolsBar = React.createClass({
   onClickSave() {
     let firstname = $('#firstname').val(),
@@ -66,6 +86,14 @@ FormToolsBar = React.createClass({
         <div className="section">
           <div className="container">
             <nav id="nav" className="nav">
+              <ul className="clinic-number">
+                <li>
+                  <div style={sizeTextbox} className="input-field">
+                    <input style={inputPosition} id="cn" type="text" value="59-000001" className="validate"/>
+                    <label style={labelColor} htmlFor="cn">CN</label>
+                  </div>
+                </li>
+              </ul>
               <ul className="navbar">
                 <li>
                     <a
