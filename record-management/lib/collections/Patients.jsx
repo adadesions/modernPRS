@@ -8,8 +8,8 @@ Patients.allow({
 History = Astro.Class({
   name: 'History',
   fields: {
-    comment: 'string',
-    visitedDate: 'date'
+    duration: 'string',
+    message: 'string'
   }
 })
 
@@ -17,7 +17,7 @@ Patient = Astro.Class({
   name: 'Patients',
   collection: Patients,
   fields: {
-    opdNo: 'number',
+    CN: 'number',
     information: {
         firstname: {
           type: 'string',
@@ -49,40 +49,43 @@ Patient = Astro.Class({
         }
     },
     interview: {
-      chiefComplaint: {
-        type: 'string',
-        default: ''
-      },
-      contraindication: {
-        type: 'string',
-        default: ''
-      },
-      diagnosis: {
-        type: 'string',
-        default: ''
-      }
+        chiefComplaint: {
+          type: 'string',
+          default: ''
+        },
+        contraindication: {
+          type: 'string',
+          default: ''
+        },
+        diagnosis: {
+          type: 'string',
+          default: ''
+        }
     },
     painSection: {
-      painScore: 'number',
-      typeOfPain: 'string',
-      duration: {
-        type: 'string',
-        default: ''
-      },
-      agg: {
-        type: 'string',
-        default: ''
-      },
-      rest: {
-        type: 'string',
-        default: ''
-      },
-      painLocation: { type: 'string', default: '' }
+        painScore: {
+          arom: 'number',
+          prom: 'number'
+        },
+        typeOfPain: 'string',
+        duration: {
+          type: 'number',
+          default: ''
+        },
+        agg: {
+          type: 'string',
+          default: ''
+        },
+        rest: {
+          type: 'string',
+          default: ''
+        },
+        painLocation: { type: 'string', default: '' }
     },
     history: {
-      type: 'array',
-      nested: 'History',
-      default: () => []
+        type: 'array',
+        nested: 'History',
+        default: () => []
     },
     assessment: {type: 'string', default: ''},
     treatment: {type: 'string', default: ''},

@@ -98,6 +98,12 @@ PainSectionInput = React.createClass({
 
   },
 
+  durationChange() {
+    let value = $('#duration').val()
+    //Update input-range
+    $('#input-range').val(value)
+  },
+
   render(){
     return(
       <div id="style-1" style={scrollPain} className="row patient-pain-section-box">
@@ -127,7 +133,7 @@ PainSectionInput = React.createClass({
             </div>
           <label style={fontSize} htmlhtmlFor="duration">Duration</label>
           <p className="range-field">
-            <input type="range" id="duration" defaultValue="0" min="0" max="300" />
+            <input type="range" id="duration" defaultValue="0" min="0" max="60" onChange={this.durationChange} />
             <input style={sizeInput} type="text" id="input-range" defaultValue="0" className="validate"/>
           </p>
           <div className="input-field">
