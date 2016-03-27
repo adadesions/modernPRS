@@ -7,12 +7,14 @@ let sizeTextbox = {
       display: 'flex',
       alignItems: 'center',
       flexFlow: 'row',
-      height: '3.2em'
+      height: '3.2em',
+      paddingRight: '0.4em'
     },
     labelColor = {
       color: '#fff',
       fontWeight: 'bold',
-      fontFamily: 'Quark-LightBold , verdana, helvetica, sans-serif'
+      fontFamily: 'Quark-LightBold , verdana, helvetica, sans-serif',
+      paddingLeft: '0.4em'
     },
     inputPosition = {
       marginTop: '0.8em'

@@ -37,7 +37,7 @@ Treatment = React.createClass({
       <div id="style-1" style={scrollTreatment} className="row patient-treatment-box">
         <div style={container}>
           <div className="input-field col s12">
-            <select defaultValue="defult" multiple>
+            <select defaultValue="defult">
               <option value="defult" disabled>Choose your option</option>
               <optgroup label="Hydro Therapy Equipment">
                 <option value="hydrotheraryTank">HYDROTHERAPY TANK</option>
