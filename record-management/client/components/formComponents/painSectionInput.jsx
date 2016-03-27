@@ -89,12 +89,6 @@ PainSectionInput = React.createClass({
         $('.patient-pain-section-box').removeClass('box-key-press')
       }),
 
-      $('#assessment').focus(function(){
-        $('.patient-pain-section-box').addClass('box-key-press')
-      }).blur(function () {
-        $('.patient-pain-section-box').removeClass('box-key-press')
-      }),
-
       $(document).ready(function() {
         $('select').material_select()
       })
@@ -155,7 +149,7 @@ PainSectionInput = React.createClass({
           <label>Present & Past History</label>
           <div style={borderBox} className="input-field col s12">
             <PresentAndPastHistory />
-          </div>                      
+          </div>
         </div>
       </div>
     )
