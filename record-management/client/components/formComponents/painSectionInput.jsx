@@ -153,15 +153,9 @@ PainSectionInput = React.createClass({
             <textarea style={scroll} id="painLocation" className="materialize-textarea"></textarea>
             <label htmlFor="painLocation">Pain Location</label>
           </div>
-<<<<<<< HEAD:record-management/client/components/formcomponents/painSectionInput.jsx
-          <div className="input-field col s12">
-            <textarea style={scroll} id="presentAndPastHistory" className="materialize-textarea"></textarea>
-            <label htmlFor="presentAndPastHistory">Present & Past History</label>
-=======
           <label>Present & Past History</label>
           <div style={borderBox} className="input-field col s12">
             <PresentAndPastHistory />
->>>>>>> 8a50769cf3762ed7accb0840c552301300757f0e:record-management/client/components/formComponents/painSectionInput.jsx
           </div>
             <PresentAndPastHistoryItems />
           <div className="input-field col s12">

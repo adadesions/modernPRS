@@ -89,7 +89,7 @@ FormToolsBar = React.createClass({
               <ul className="clinic-number">
                 <li>
                   <div style={sizeTextbox} className="input-field">
-                    <input style={inputPosition} id="cn" type="text" value="59-000001" className="validate"/>
+                    <input style={inputPosition} id="cn" type="text" defaultValue="59-000001" className="validate"/>
                     <label style={labelColor} htmlFor="cn">CN</label>
                   </div>
                 </li>

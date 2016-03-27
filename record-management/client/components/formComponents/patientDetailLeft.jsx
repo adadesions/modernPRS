@@ -1,5 +1,5 @@
 PatientDetialLeft = React.createClass({
-  
+
   componentDidMount(){
     $('.datepicker').pickadate({
       selectMonths: true, // Creates a dropdown to control month
@@ -39,11 +39,7 @@ PatientDetialLeft = React.createClass({
     return(
       <div className="row">
         <div className="input-field">
-<<<<<<< HEAD:record-management/client/components/formcomponents/patientDetailLeft.jsx
-          <input id="bod" type="text" className="datepicker"/>
-=======
           <input id="bod" type="date" className="datepicker"/>
->>>>>>> 8a50769cf3762ed7accb0840c552301300757f0e:record-management/client/components/formComponents/patientDetailLeft.jsx
           <label htmlFor="bod">BOD</label>
         </div>
         <div className="input-field">
