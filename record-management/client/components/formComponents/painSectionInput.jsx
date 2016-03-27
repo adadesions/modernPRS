@@ -3,9 +3,7 @@ let scroll = {
     },
     scrollPain = {
       overflowY: 'auto',
-      height: '92vh',
-      display: 'flex',
-      justifyContent: 'center'
+      height: '92vh'
     },
     container = {
       width: '90%'
@@ -40,6 +38,11 @@ let scroll = {
       padding: '0.3em',
       width: '2.5em',
       height: '2.5em'
+    },
+    borderBox = {
+      padding:'1em',
+      borderRadius: '2px',
+      border: '1px solid rgba(124,182,221,0.5)'
     }
 
 PainSectionInput = React.createClass({
@@ -120,14 +123,16 @@ PainSectionInput = React.createClass({
             <div className="input-field">
               <select id="typeOfPain" defaultValue="topicTypeOfPain" className="icons">
                 <option value="topicTypeOfPain" disabled>Choose your option</option>
-                <option value="pain" data-icon="images/typeofpain/pain.png" className="left circle">Pain</option>
-                <option value="referedPain" data-icon="images/typeofpain/refered-line.png" className="left circle">Referred Pain</option>
-                <option value="numbless" data-icon="images/typeofpain/numbless.png" className="left circle">Numbless</option>
-                <option value="subluxation" data-icon="images/typeofpain/subluxation.png" className="left circle">Subluxation</option>
-                <option value="tightness" data-icon="images/typeofpain/tighness.png" className="left circle">Tightness</option>
-                <option value="weakness" data-icon="images/typeofpain/weakness.png" className="left circle">Weakness</option>
-                <option value="incisionLine" data-icon="images/typeofpain/incision-line.png" className="left circle">Incision Line</option>
-                <option value="other" data-icon="images/typeofpain/other.png" className="left circle">Other</option>
+                <option value="sharpPain" className="left circle">Sharp pain</option>
+                <option value="deepDullPain" className="left circle">Deep Dull Pain</option>
+                <option value="shinglesPain" className="left circle">Shingles Pain</option>
+                <option value="sciaticaPain" className="left circle">Sciatica Pain</option>
+                <option value="burningPain" className="left circle">Burning Pain</option>
+                <option value="neuropathicPain" className="left circle">Neuropathic Pain</option>
+                <option value="stabbingPain" className="left circle">Stabbing Pain</option>
+                <option value="throbbingPain" className="left circle">Throbbing Pain</option>
+                <option value="burning" className="left circle">Burning</option>
+                <option value="prickling" className="left circle">Prickling</option>
               </select>
               <label htmlFor="typeOfPain">Type Of Pain</label>
             </div>
@@ -148,10 +153,17 @@ PainSectionInput = React.createClass({
             <textarea style={scroll} id="painLocation" className="materialize-textarea"></textarea>
             <label htmlFor="painLocation">Pain Location</label>
           </div>
+<<<<<<< HEAD:record-management/client/components/formcomponents/painSectionInput.jsx
           <div className="input-field col s12">
             <textarea style={scroll} id="presentAndPastHistory" className="materialize-textarea"></textarea>
             <label htmlFor="presentAndPastHistory">Present & Past History</label>
+=======
+          <label>Present & Past History</label>
+          <div style={borderBox} className="input-field col s12">
+            <PresentAndPastHistory />
+>>>>>>> 8a50769cf3762ed7accb0840c552301300757f0e:record-management/client/components/formComponents/painSectionInput.jsx
           </div>
+            <PresentAndPastHistoryItems />
           <div className="input-field col s12">
             <textarea style={scroll} id="assessment" className="materialize-textarea"></textarea>
             <label htmlFor="assessment">Assessment</label>

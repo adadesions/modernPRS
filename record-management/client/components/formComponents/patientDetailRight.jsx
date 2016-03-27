@@ -35,7 +35,7 @@ PatientDetialRight = React.createClass({
           patientAge--
       }
     }
-    //Display on age input    
+    //Display on age input
     $('#age').val(patientAge)
   },
 

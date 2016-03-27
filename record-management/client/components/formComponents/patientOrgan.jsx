@@ -22,7 +22,7 @@ PatientOrgan = React.createClass({
 
       var offset = $(this).offset();
       var relativeX = (e.pageX - offset.left)/10;
-      var relativeY = (-(e.pageY - offset.top)/10)-80;
+      var relativeY = (-(e.pageY - offset.top)/10)-50;
 
       $('.fixed-action-btn.horizontal.click-to-toggle.menu-organ').css('position','absolute')
       $('.fixed-action-btn.horizontal.click-to-toggle.menu-organ').css('right',relativeX+'em')

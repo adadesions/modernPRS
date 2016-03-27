@@ -118,49 +118,7 @@ PhysicalForm = React.createClass({
             </div>
           </div>
           <div style={paddingTable} className="row">
-            <table className="striped centered">
-              <thead>
-                <tr>
-                    <th data-field="id">Subject</th>
-                    <th data-field="name">Object</th>
-                    <th data-field="price">Analysis</th>
-                    <th data-field="price">Plan</th>
-                </tr>
-              </thead>
-
-              <tbody>
-                <tr>
-                  <td>Test1</td>
-                  <td>Test1</td>
-                  <td>Test1</td>
-                  <td>Test1</td>
-                </tr>
-                <tr>
-                  <td>Test1</td>
-                  <td>Test1</td>
-                  <td>Test1</td>
-                  <td>Test1</td>
-                </tr>
-                <tr>
-                  <td>Test1</td>
-                  <td>Test1</td>
-                  <td>Test1</td>
-                  <td>Test1</td>
-                </tr>
-                <tr>
-                  <td>Test1</td>
-                  <td>Test1</td>
-                  <td>Test1</td>
-                  <td>Test1</td>
-                </tr>
-                <tr>
-                  <td>Test1</td>
-                  <td>Test1</td>
-                  <td>Test1</td>
-                  <td>Test1</td>
-                </tr>
-              </tbody>
-            </table>
+            <ProgressionNote />
           </div>
         </div>
       </div>
