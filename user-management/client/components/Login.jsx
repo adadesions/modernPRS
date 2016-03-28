@@ -41,11 +41,14 @@ Login = React.createClass({
             </div>
           </div>
           <div className="row">
-            <div className="input-field col l6">
+            <div className="input-field col l4">
               <a className="waves-effect waves-light btn">Close</a>
             </div>
-            <div className="input-field col l6">
+            <div className="input-field col l4">
               <a className="waves-effect waves-light btn">Login</a>
+            </div>
+            <div className="input-field col l4">
+              <a className="waves-effect waves-light btn">Register</a>
             </div>
           </div>
         </form>
