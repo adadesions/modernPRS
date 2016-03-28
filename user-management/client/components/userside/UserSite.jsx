@@ -42,7 +42,7 @@ let colorNav = {
       marginRight: '1em'
     }
 
-UserSide = React.createClass({
+UserSite = React.createClass({
 
   componentDidMount(){
 
@@ -87,7 +87,7 @@ UserSide = React.createClass({
           <li><a style={colorText} href="#!"><img style={paddingImg} src="/images/icon/trash.png" className="circle"/><h5>Trash</h5></a></li>
           <li><a style={colorText} href="#!"><img style={paddingImg} src="/images/icon/set.png" className="circle"/><h5>Set</h5></a></li>
         </ul>
-        <ToolsBarUserSide />
+        <ToolsBarUserSite />
           <div className="cover-user-side">
             <img style={sizeImage} src="/images/cover/cover.jpg"/>
           </div>

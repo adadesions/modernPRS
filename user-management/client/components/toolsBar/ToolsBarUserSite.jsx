@@ -30,7 +30,7 @@ let navBox = {
       fontSize: '20px'
     }
 
-ToolsBarUserSide = React.createClass({
+ToolsBarUserSite = React.createClass({
   componentDidMount(){
     $(".dropdown-button").dropdown()
   },
