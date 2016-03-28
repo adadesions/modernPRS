@@ -2,18 +2,31 @@ let center = {
       display: 'flex',
       alignItems: 'center',
       flexFlow: 'column',
-      border: '1px solid rgba(124,182,221,0.5)',
-      borderRadius : '2px'
+      borderRadius : '2px',
+      backgroundColor: 'rgba(250,250,250,0.95)'
     },
-    floatRight = {
-      display: 'flex',
-      justifyContent: 'flex-end',
+    sizeBotton = {
       width: '100%'
     },
     alignCenter = {
       display: 'flex',
       alignItems: 'center',
-      height: '100vh'
+      height: '100vh',
+      background: 'url("/images/cover/cover.jpg")'
+    },
+    colorText = {
+      color: '#eeeeee',
+      textShadow: '0px 1px 0px rgba(255,255,255,0.3), 0px -1px 0px rgba(0,0,0,0.3)'
+    },
+    justifyCenter = {
+      display: 'flex',
+      alignItems: 'center',
+      justifyCenter: 'space-between',
+      width: '100%'
+    },
+    floatRight = {
+      display: 'flex',
+      justifyContent: 'flex-end'
     }
 
 Login = React.createClass({
@@ -24,7 +37,15 @@ Login = React.createClass({
         <div className="col l4">
           <br/>
         </div>
-        <form style={center} className="col l4">
+        <form style={center} className="col l4 z-depth-1">
+          <div className="row">
+            <div className="input-field col l12">
+              <h1 style={colorText}>Login</h1>
+            </div>
+            <div className="progress">
+              <div className="indeterminate"></div>
+            </div>
+          </div>
           <div className="row">
             <div className="input-field col l12">
               <input id="username" type="text" className="validate"/>
@@ -35,17 +56,17 @@ Login = React.createClass({
               <label htmlFor="password">Password</label>
             </div>
           </div>
-          <div className="row">
-            <div style={floatRight} className="input-field col l12">
-              <a href="">Forget Password ?</a>
+          <div style={sizeBotton} className="row">
+            <div className="input-field col l12">
+              <a style={sizeBotton} className="waves-effect waves-light btn">Login</a>
             </div>
           </div>
-          <div className="row">
+          <div style={justifyCenter} className="row">
             <div className="input-field col l6">
-              <a className="waves-effect waves-light btn">Login</a>
+              <a href="">Forget Password ?</a>
             </div>
-            <div className="input-field col l6">
-              <a href="/register" className="waves-effect waves-light btn">Register</a>
+            <div style={floatRight} className="input-field col l6">
+              <a href="/register">Register ?</a>
             </div>
           </div>
         </form>

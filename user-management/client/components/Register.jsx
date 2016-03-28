@@ -2,8 +2,8 @@ let center = {
       display: 'flex',
       alignItems: 'center',
       flexFlow: 'column',
-      border: '1px solid rgba(124,182,221,0.5)',
-      borderRadius : '2px'
+      borderRadius : '2px',
+      backgroundColor: 'rgba(250,250,250,0.95)'
     },
     floatRight = {
       display: 'flex',
@@ -13,7 +13,8 @@ let center = {
     alignCenter = {
       display: 'flex',
       alignItems: 'center',
-      height: '100vh'
+      height: '100vh',
+      background: 'url("/images/cover/cover.jpg")'
     }
 
 Register = React.createClass({
@@ -36,7 +37,7 @@ Register = React.createClass({
         <div className="col l4">
           <br/>
         </div>
-        <form style={center} className="col l4">
+        <form style={center} className="col l4 z-depth-1">
           <div className="row">
             <div className="input-field col l12">
               <input id="business-name" type="text" className="validate"/>
