@@ -3,7 +3,10 @@ let scroll = {
     },
     scrollPain = {
       overflowY: 'auto',
-      height: '92vh'
+      height: '143vh',
+      display: 'flex',
+      justifyContent: 'center',
+      paddingTop: '1em'
     },
     container = {
       width: '90%'

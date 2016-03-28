@@ -2,18 +2,19 @@ let center = {
       display: 'flex',
       alignItems: 'center',
       flexFlow: 'column',
-      border: '1px solid rgba(124,182,221,0.5)',
-      borderRadius : '2px'
-    },
-    floatRight = {
-      display: 'flex',
-      justifyContent: 'flex-end',
-      width: '100%'
+      borderRadius : '2px',
+      backgroundColor: 'rgba(250,250,250,0.95)'
     },
     alignCenter = {
       display: 'flex',
       alignItems: 'center',
-      height: '100vh'
+      height: '100vh',
+      background: 'url("/images/cover/cover.jpg")',
+      marginBottom: '0'
+    },
+    colorText = {
+      color: '#009688',
+      textShadow: '0px 1px 0px rgba(255,255,255,0.3), 0px -1px 0px rgba(0,0,0,0.3)'
     }
 
 Register = React.createClass({
@@ -36,8 +37,11 @@ Register = React.createClass({
         <div className="col l4">
           <br/>
         </div>
-        <form style={center} className="col l4">
+        <form style={center} className="col l4 z-depth-1">
           <div className="row">
+            <div className="input-field col l12">
+              <h3 style={colorText}>Register</h3>
+            </div>
             <div className="input-field col l12">
               <input id="business-name" type="text" className="validate"/>
               <label htmlFor="business-name">Business name</label>
@@ -66,9 +70,7 @@ Register = React.createClass({
               <input id="re-password" type="text" className="validate"/>
               <label htmlFor="re-password">Re-Password</label>
             </div>
-          </div>
-          <div className="row">
-            <div style={floatRight} className="input-field col l12">
+            <div className="input-field col l12">
               <p>
                 <input type="checkbox" id="term-condition"/>
                 <label htmlFor="term-condition">Accept Term And Condition</label>

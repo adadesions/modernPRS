@@ -3,7 +3,8 @@ let scroll = {
     },
     scrollInterview = {
       overflowY: 'auto',
-      height: '92vh',
+      marginTop: '1em',
+      height: '80vh',
       padding: '2em'
     }
 ProgressionNote = React.createClass({

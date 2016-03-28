@@ -3,7 +3,7 @@ let scroll = {
     },
     scrollInterview = {
       overflowY: 'auto',
-      height: '92vh'
+      height: '77vh'
     }
 
 PatientInterview = React.createClass({

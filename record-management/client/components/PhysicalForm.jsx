@@ -6,31 +6,63 @@ let controlBar = {
     justifyContent: 'center',
     alignItem: 'center'
   },
-  paddingRightcol = {
+  colInterviewPatient = {
     padding: '2em',
-    height: '100vh',
-    backgroundColor: '#fff',
-    borderRadius: '2px',
-    opacity: '0.9'
+    height: '85vh',
+    backgroundColor: 'rgba(255,255,255,0.9)',
+    borderRadius: '2px'
   },
-  paddingLeftCol = {
+  colDetailPatient = {
     padding: '2em',
     WebkitBoxShadow: '1px 0px 1px 0px rgba(124,182,221,0.5)',
     MozBoxShadow: '1px 0px 1px 0px rgba(124,182,221,0.5)',
     boxShadow: '1px 0px 1px 0px rgba(124,182,221,0.5)',
     borderRight: '1px solid rgba(124,182,221,0.5)',
-    height: '100vh',
+    height: '85vh',
+    backgroundColor: 'rgba(255,255,255,0.9)',
+    borderRadius: '2px'
+  },
+  colPainSection = {
+    padding: '2em',
+    height: '160vh',
+    backgroundColor: '#fff',
+    borderRadius: '2px'
+  },
+  colModel = {
+    padding: '2em',
+    WebkitBoxShadow: '1px 0px 1px 0px rgba(124,182,221,0.5)',
+    MozBoxShadow: '1px 0px 1px 0px rgba(124,182,221,0.5)',
+    boxShadow: '1px 0px 1px 0px rgba(124,182,221,0.5)',
+    borderRight: '1px solid rgba(124,182,221,0.5)',
+    height: '160vh',
     backgroundColor: '#fff',
     borderRadius: '2px',
-    opacity: '0.9'
+    display: 'flex',
+    alignItem: 'center'
   },
-  paddingTable = {
+  colAssessment = {
+    padding: '2em',
+    height: '80vh',
+    backgroundColor: '#fff',
+    borderRadius: '2px'
+  },
+  colOrgan = {
+    padding: '2em',
+    WebkitBoxShadow: '1px 0px 1px 0px rgba(124,182,221,0.5)',
+    MozBoxShadow: '1px 0px 1px 0px rgba(124,182,221,0.5)',
+    boxShadow: '1px 0px 1px 0px rgba(124,182,221,0.5)',
+    borderRight: '1px solid rgba(124,182,221,0.5)',
+    height: '80vh',
+    backgroundColor: '#fff',
+    borderRadius: '2px'
+  },
+  colProgressionNote = {
+    paddingTop: '1em',
     paddingLeft: '2em',
     paddingRight: '2em',
-    height: '100vh',
+    height: '90vh',
     backgroundColor: '#fff',
-    borderRadius: '2px',
-    opacity: '0.9'
+    borderRadius: '2px'
   },
   physicalFormBG = {
     backgroundColor: '#eeeeee',
@@ -89,7 +121,7 @@ PhysicalForm = React.createClass({
         <div style={container}>
           <FormToolsBar />
           <div style={marginRow} className="row z-depth-1">
-            <div style={paddingLeftCol} className="col l6">
+            <div style={colDetailPatient} className="col l6">
               <div className="row">
                 <div style={center} className="col l6">
                   <PatiendImage />
@@ -107,27 +139,27 @@ PhysicalForm = React.createClass({
                 </div>
               </div>
             </div>
-            <div style={paddingRightcol} className="col l6">
+            <div style={colInterviewPatient} className="col l6">
               <PatientInterview />
             </div>
           </div>
           <div className="row z-depth-1">
-            <div style={paddingLeftCol} className="col l6">
+            <div style={colModel} className="col l6">
               <PatientModel />
             </div>
-            <div style={paddingRightcol} className="col l6">
+            <div style={colPainSection} className="col l6">
               <PainSectionInput />
             </div>
           </div>
           <div className="row z-depth-1">
-            <div style={paddingLeftCol} className="col l6">
+            <div style={colOrgan} className="col l6">
               <PatientOrgan />
             </div>
-            <div style={paddingRightcol} className="col l6">
-              <Treatment />
+            <div style={colAssessment} className="col l6">
+              <Assessment />
             </div>
           </div>
-          <div style={paddingTable} className="row z-depth-1">
+          <div style={colProgressionNote} className="row z-depth-1">
             <ProgressionNote />
           </div>
         </div>

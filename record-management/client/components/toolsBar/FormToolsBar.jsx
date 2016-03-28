@@ -67,7 +67,7 @@ FormToolsBar = React.createClass({
 
   render(){
     return(
-      <div className="nav-prs">
+      <div className="nav-prs z-depth-1">
         <div className="section">
           <div className="container">
             <nav id="nav" className="nav">
