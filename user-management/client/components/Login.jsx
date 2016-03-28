@@ -39,15 +39,6 @@ Login = React.createClass({
         }
     },
 
-    authentication() {
-        if(!this.data.user){
-          FlowRouter.go('/login')
-        }
-        else{
-          FlowRouter.go('physicalForm')
-        }
-    },
-
     clickLogin() {
         let username = $('#username').val(),
             password = $('#password').val()
@@ -56,9 +47,15 @@ Login = React.createClass({
               FlowRouter.go('login')
             }
             else{
-              FlowRouter.go('physicalForm')
+              FlowRouter.go('mainUserSite')
             }
         })
+    },
+
+    componentDidMount() {
+        // Meteor.onLogin(function () {
+            // let path
+        // })
     },
 
     render() {
