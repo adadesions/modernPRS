@@ -31,8 +31,16 @@ let center = {
     }
 
 Login = React.createClass({
-
-  render(){
+  clickLogin() {
+      let username = $('#username').val(),
+          password = $('#password').val()
+      Meteor.loginWithPassword(username, password, function () {
+        if(Meteor.user()){
+          FlowRouter.go('/physicalform')
+        }
+      })
+  },
+  render() {
     return(
       <div style={alignCenter} className="row">
         <div className="col l4">
@@ -59,22 +67,27 @@ Login = React.createClass({
           </div>
           <div style={sizeBotton} className="row">
             <div className="input-field col l12">
-              <a style={sizeBotton} className="waves-effect waves-light btn">Login</a>
+              <a
+                style={sizeBotton}
+                className="waves-effect waves-light btn"
+                onClick={this.clickLogin}
+              >Login
+              </a>
+              </div>
             </div>
-          </div>
-          <div style={justifyCenter} className="row">
-            <div className="input-field col l6">
-              <a href="">Forget Password ?</a>
+            <div style={justifyCenter} className="row">
+                <div className="input-field col l6">
+                  <a href="">Forget Password</a>
+                </div>
+                <div style={floatRight} className="input-field col l6">
+                  <a href="/register">Register</a>
+                </div>
             </div>
-            <div style={floatRight} className="input-field col l6">
-              <a href="/register">Register ?</a>
-            </div>
-          </div>
-        </form>
-        <div className="col l4">
-          <br/>
+          </form>
+         <div className="col l4">
+           <br/>
+         </div>
         </div>
-      </div>
-    )
+      )
   }
 })

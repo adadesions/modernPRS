@@ -22,5 +22,6 @@ flemay:less-autoprefixer
 poetic:materialize-scss
 jagi:astronomy
 ryanswrt:lazyjs
-meteorhacks:flow-router
 kadira:react-layout
+accounts-password
+kadira:flow-router
