@@ -3,14 +3,15 @@ let scroll = {
     },
     scrollTreatment = {
       overflowY: 'auto',
-      height: '95vh',
+      height: '72vh',
       display: 'flex',
       justifyContent: 'center'
     },
     container = {
       width: '90%'
     }
-Treatment = React.createClass({
+
+Assessment = React.createClass({
 
   componentDidMount(){
       $('#treatment').focus(function(){

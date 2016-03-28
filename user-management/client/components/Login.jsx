@@ -28,16 +28,16 @@ Login = React.createClass({
           <div className="row">
             <div className="input-field col l12">
               <input id="username" type="text" className="validate"/>
-              <label for="username">Username</label>
+              <label htmlFor="username">Username</label>
             </div>
             <div className="input-field col l12">
               <input id="password" type="text" className="validate"/>
-              <label for="password">Password</label>
+              <label htmlFor="password">Password</label>
             </div>
           </div>
           <div className="row">
             <div style={floatRight} className="input-field col l12">
-              <a>Forget Password</a>
+              <a href="">Forget Password ?</a>
             </div>
           </div>
           <div className="row">
