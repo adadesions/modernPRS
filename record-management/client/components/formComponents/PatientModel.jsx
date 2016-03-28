@@ -62,12 +62,12 @@ PatientModel = React.createClass({
     var offset = $(this).offset();
     var relativeX = ((e.pageX - offset.left)/10)+10;
     var relativeY = (-(e.pageY - offset.top)/10)-10;
-    var relativeYTop = ((e.pageY - offset.top)/10)+10;
 
     $('.fixed-action-btn.horizontal.click-to-toggle.menu-model').css('position','absolute')
     $('.fixed-action-btn.horizontal.click-to-toggle.menu-model').css('right',relativeX+'em')
     $('.fixed-action-btn.horizontal.click-to-toggle.menu-model').css('left',relativeX+'em')
     $('.fixed-action-btn.horizontal.click-to-toggle.menu-model').css('bottom',relativeY+'em')
+    $('.fixed-action-btn.horizontal.click-to-toggle.menu-model').css('z-index','+100')
 
     $('.fixed-action-btn.horizontal.click-to-toggle.menu-model').openFAB();
 
@@ -79,7 +79,7 @@ PatientModel = React.createClass({
 
     var offset = $(this).offset();
     var relativeX = ((e.pageX - offset.left)/10)+20;
-    var relativeY = (-(e.pageY - offset.top)/10);
+    var relativeY = (-(e.pageY - offset.top)/10)-10;
 
     $('.fixed-action-btn.horizontal.click-to-toggle.menu-model').css('position','absolute')
     $('.fixed-action-btn.horizontal.click-to-toggle.menu-model').css('right',relativeX+'em')
@@ -96,7 +96,7 @@ PatientModel = React.createClass({
 
     var offset = $(this).offset();
     var relativeX = ((e.pageX - offset.left)/10)+10;
-    var relativeY = (-(e.pageY - offset.top)/10)-25;
+    var relativeY = (-(e.pageY - offset.top)/10)-35;
 
     $('.fixed-action-btn.horizontal.click-to-toggle.menu-model').css('position','absolute')
     $('.fixed-action-btn.horizontal.click-to-toggle.menu-model').css('right',relativeX+'em')
@@ -112,8 +112,8 @@ PatientModel = React.createClass({
   $(".side-left-model").click(function(e) {
 
     var offset = $(this).offset();
-    var relativeX = ((e.pageX - offset.left)/10)+30;
-    var relativeY = (-(e.pageY - offset.top)/10)-25;
+    var relativeX = ((e.pageX - offset.left)/10)+20;
+    var relativeY = (-(e.pageY - offset.top)/10)-35;
 
     $('.fixed-action-btn.horizontal.click-to-toggle.menu-model').css('position','absolute')
     $('.fixed-action-btn.horizontal.click-to-toggle.menu-model').css('right',relativeX+'em')

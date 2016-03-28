@@ -9,9 +9,8 @@ let controlBar = {
   colInterviewPatient = {
     padding: '2em',
     height: '85vh',
-    backgroundColor: '#fff',
-    borderRadius: '2px',
-    opacity: '0.9'
+    backgroundColor: 'rgba(255,255,255,0.9)',
+    borderRadius: '2px'
   },
   colDetailPatient = {
     padding: '2em',
@@ -20,16 +19,14 @@ let controlBar = {
     boxShadow: '1px 0px 1px 0px rgba(124,182,221,0.5)',
     borderRight: '1px solid rgba(124,182,221,0.5)',
     height: '85vh',
-    backgroundColor: '#fff',
-    borderRadius: '2px',
-    opacity: '0.9'
+    backgroundColor: 'rgba(255,255,255,0.9)',
+    borderRadius: '2px'
   },
   colPainSection = {
     padding: '2em',
     height: '160vh',
     backgroundColor: '#fff',
-    borderRadius: '2px',
-    opacity: '0.9'
+    borderRadius: '2px'
   },
   colModel = {
     padding: '2em',
@@ -40,7 +37,6 @@ let controlBar = {
     height: '160vh',
     backgroundColor: '#fff',
     borderRadius: '2px',
-    opacity: '0.9',
     display: 'flex',
     alignItem: 'center'
   },
@@ -48,8 +44,7 @@ let controlBar = {
     padding: '2em',
     height: '80vh',
     backgroundColor: '#fff',
-    borderRadius: '2px',
-    opacity: '0.9'
+    borderRadius: '2px'
   },
   colOrgan = {
     padding: '2em',
@@ -59,8 +54,7 @@ let controlBar = {
     borderRight: '1px solid rgba(124,182,221,0.5)',
     height: '80vh',
     backgroundColor: '#fff',
-    borderRadius: '2px',
-    opacity: '0.9'
+    borderRadius: '2px'
   },
   colProgressionNote = {
     paddingTop: '1em',
@@ -68,8 +62,7 @@ let controlBar = {
     paddingRight: '2em',
     height: '90vh',
     backgroundColor: '#fff',
-    borderRadius: '2px',
-    opacity: '0.9'
+    borderRadius: '2px'
   },
   physicalFormBG = {
     backgroundColor: '#eeeeee',
