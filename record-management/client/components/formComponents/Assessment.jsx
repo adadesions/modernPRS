@@ -14,7 +14,7 @@ let scroll = {
 Assessment = React.createClass({
 
   componentDidMount(){
-      $('#treatment').focus(function(){
+      $('#assessment').focus(function(){
         $('.patient-treatment-box').addClass('box-key-press')
       }).blur(function () {
         $('.patient-treatment-box').removeClass('box-key-press')
