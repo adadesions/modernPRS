@@ -31,6 +31,61 @@ Register = React.createClass({
       })
   },
 
+  invalidPassword() {
+    let $password = $('#password'),
+        $rePassword = $('#re-password')
+    $password.removeClass('valid').addClass('invalid')
+    $rePassword.removeClass('valid').addClass('invalid')
+  },
+
+  validPassword() {
+    let $password = $('#password'),
+        $rePassword = $('#re-password')
+    $password.addClass('valid').removeClass('invalid')
+    $rePassword.addClass('valid').removeClass('invalid')
+  },
+
+  _onClickSubmit() {
+      let businessName = $('#business-name').val(),
+          businessType = $('#business-type').find(':selected').val(),
+          ownerName = $('#owner-name').val(),
+          email = $('#email').val(),
+          password = $('#password').val().toString(),
+          rePassword = $('#re-password').val().toString(),
+          acceptTerm = $('#term-condition').prop('checked'),
+          isPasswordEqual = password === rePassword
+
+      if(isPasswordEqual){
+        if(acceptTerm) {
+            let newUser = {
+              businessName,
+              businessType
+            }
+            Accounts.createUser({
+              email,
+              password,
+              username: ownerName,
+              profile: newUser
+            })
+        }
+      }
+      else{
+        this.invalidPassword()
+      }
+  },
+
+  _onChangePasswordInput() {
+      let password = $('#password').val(),
+          rePassword = $('#re-password').val(),
+          isPasswordEqual = password === rePassword
+      if(!isPasswordEqual){
+        this.invalidPassword()
+      }
+      else{
+        this.validPassword()
+      }
+  },
+
   render(){
     return(
         <div style={alignCenter} className="row">
@@ -47,11 +102,9 @@ Register = React.createClass({
                 <label htmlFor="business-name">Business name</label>
               </div>
               <div className="input-field col s12">
-                <select defaultValue="0">
+                <select id="business-type" defaultValue="0">
                   <option value="0" disabled>Business type</option>
-                  <option value="1">Option 1</option>
-                  <option value="2">Option 2</option>
-                  <option value="3">Option 3</option>
+                  <option value="Physical Therapy Clinic">Physical Therapy Clinic</option>
                 </select>
               </div>
               <div className="input-field col l12">
@@ -59,15 +112,25 @@ Register = React.createClass({
                 <label htmlFor="owner-name">Owner name</label>
               </div>
               <div className="input-field col l12">
-                <input id="email" type="text" className="validate"/>
+                <input id="email" type="email" className="validate"/>
                 <label htmlFor="email">Email</label>
               </div>
               <div className="input-field col l12">
-                <input id="password" type="text" className="validate"/>
+                <input
+                  id="password"
+                  type="password"
+                  className="validate"
+                  onChange={this._onChangePasswordInput}
+                />
                 <label htmlFor="password">Password</label>
               </div>
               <div className="input-field col l12">
-                <input id="re-password" type="text" className="validate"/>
+                <input
+                  id="re-password"
+                  type="password"
+                  className="validate"
+                  onChange={this._onChangePasswordInput}
+                />
                 <label htmlFor="re-password">Re-Password</label>
               </div>
               <div className="input-field col l12">
@@ -82,7 +145,10 @@ Register = React.createClass({
                 <a href="/" className="waves-effect waves-light btn">Back</a>
               </div>
               <div className="input-field col l6">
-                <a className="waves-effect waves-light btn">Submit</a>
+                <a
+                  className="waves-effect waves-light btn"
+                  onClick={this._onClickSubmit}
+                >Submit</a>
               </div>
             </div>
           </form>

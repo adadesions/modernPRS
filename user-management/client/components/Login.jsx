@@ -49,6 +49,12 @@ Login = React.createClass({
         FlowRouter.go('register')
     },
 
+    _onClickForgotPassword() {
+      Accounts.forgotPassword({email:'ada@adacode.io'}, function () {
+        console.log('prodessing');
+      })
+    },
+
     render() {
       return(
         <div style={alignCenter} className="row">
@@ -86,7 +92,10 @@ Login = React.createClass({
             </div>
             <div style={justifyCenter} className="row">
               <div className="input-field col l6">
-                <a href="">Forget Password</a>
+                <a
+                  href=""
+                  onClick={this._onClickForgotPassword}
+                >Forget Password</a>
               </div>
               <div style={floatRight} className="input-field col l6">
                 <a
