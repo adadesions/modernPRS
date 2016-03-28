@@ -21,3 +21,11 @@ FlowRouter.route('/register', {
       })
     }
 });
+
+FlowRouter.route('/userside', {
+    action: function(params) {
+      ReactLayout.render(Container, {
+        content: <UserSide />
+      })
+    }
+});
