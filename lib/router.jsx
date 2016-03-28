@@ -22,6 +22,7 @@ rootRoutes.route('/login', {
 });
 
 rootRoutes.route('/register', {
+    name: 'register',
     action(params) {
       ReactLayout.render(Container, {
         content: <Register />

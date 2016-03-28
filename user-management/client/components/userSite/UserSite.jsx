@@ -43,14 +43,13 @@ let colorNav = {
     }
 
 UserSite = React.createClass({
-
+  mixins: [EnsureLogInMixin],
   componentDidMount(){
-
-    $('slide-out').sideNav({
-        menuWidth: 300, // Default is 240
-        edge: 'left', // Choose the horizontal origin
-        closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
-      }
+      $('slide-out').sideNav({
+          menuWidth: 300, // Default is 240
+          edge: 'left', // Choose the horizontal origin
+          closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+        }
     ),
 
     (function($) {
@@ -74,7 +73,7 @@ UserSite = React.createClass({
     })
   },
 
-  render(){
+  render(){  
     return(
       <div className="user-side">
         <ul style={colorNav} id="slide-out" className="side-nav fixed">

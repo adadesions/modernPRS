@@ -4,7 +4,7 @@ let inputPosition = {
     }
 
 FormToolsBar = React.createClass({
-  onClickSave() {
+  _onClickSave() {
     let firstname = $('#firstname').val(),
         lastname = $('#lastname').val(),
         bod = $('#bod').val(),
@@ -84,7 +84,7 @@ FormToolsBar = React.createClass({
                     <a
                       id="save-btn"
                       className="waves-effect waves-light btn green accent-4"
-                      onClick={this.onClickSave}
+                      onClick={this._onClickSave}
                     >
                     Save
                     </a>

@@ -31,15 +31,9 @@ let center = {
     }
 
 Login = React.createClass({
-    mixins: [ReactMeteorData],
+    mixins: [LoggedInMixin],
 
-    getMeteorData() {
-        return {
-          user: Meteor.user()
-        }
-    },
-
-    clickLogin() {
+    _onClickLogin() {
         let username = $('#username').val(),
             password = $('#password').val()
         Meteor.loginWithPassword(username, password, function () {
@@ -51,11 +45,8 @@ Login = React.createClass({
             }
         })
     },
-
-    componentDidMount() {
-        // Meteor.onLogin(function () {
-            // let path
-        // })
+    _onClickRegister() {
+        FlowRouter.go('register')
     },
 
     render() {
@@ -88,17 +79,20 @@ Login = React.createClass({
                 <a
                   style={sizeBotton}
                   className="waves-effect waves-light btn"
-                  onClick={this.clickLogin}
+                  onClick={this._onClickLogin}
                 >Login
                 </a>
-                </div>
               </div>
-              <div style={justifyCenter} className="row">
-                  <div className="input-field col l6">
-                    <a href="">Forget Password</a>
-                  </div>
-                  <div style={floatRight} className="input-field col l6">
-                    <a href="/register">Register</a>
+            </div>
+            <div style={justifyCenter} className="row">
+              <div className="input-field col l6">
+                <a href="">Forget Password</a>
+              </div>
+              <div style={floatRight} className="input-field col l6">
+                <a
+                  href="/register"
+                  onClick={this._onClickRegister}
+                >Register</a>
                   </div>
               </div>
             </form>
