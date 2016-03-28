@@ -12,10 +12,11 @@ let center = {
       display: 'flex',
       alignItems: 'center',
       height: '100vh',
-      background: 'url("/images/cover/cover.jpg")'
+      background: 'url("/images/cover/cover.jpg")',
+      marginBottom: '0'
     },
     colorText = {
-      color: '#eeeeee',
+      color: '#009688',
       textShadow: '0px 1px 0px rgba(255,255,255,0.3), 0px -1px 0px rgba(0,0,0,0.3)'
     },
     justifyCenter = {
