@@ -19,24 +19,35 @@ PatientDetialRight = React.createClass({
               return month === m
           })
       }
-      let bodValue = $('#bod').val().split(','),
-          daynMonth = bodValue[0].split(' '),
-          patientDay = daynMonth[0].trim(),
-          patientMonth = monthToNumber(daynMonth[1].trim()),
-          patientYear = bodValue[1].trim(),
-          now = new Date(),
-          currentDay = now.getDate(),
-          currentYear = now.getFullYear(),
-          currentMonth = now.getMonth(),
-          patientAge = currentYear-patientYear
+      const findExectlyAge = (bod) => {
+          let bodValue = bod,
+              daynMonth = bodValue[0].split(' '),
+              patientDay = daynMonth[0].trim(),
+              patientMonth = monthToNumber(daynMonth[1].trim()),
+              patientYear = bodValue[1].trim(),
+              now = new Date(),
+              currentYear = now.getFullYear(),
+              currentDay = now.getDate(),
+              currentMonth = now.getMonth(),
+              patientAge = currentYear-patientYear
 
-      if(patientMonth >= currentMonth){
-        if(patientDay < currentDay){
-          patientAge--
+          if(patientMonth >= currentMonth){
+            if(patientDay < currentDay){
+              patientAge--
+            }
+          }
+          return patientAge
       }
-    }
-    //Display on age input
-    $('#age').val(patientAge)
+      const preventMinusAge = (age) => {
+          return age < 0 ? 0 : age
+      }
+
+      let bodValue = $('#bod').val().split(','),
+          patientAge = findExectlyAge(bodValue)
+
+      //Display on age input
+      patientAge = preventMinusAge(patientAge)
+      $('#age').val(patientAge)
   },
 
   componentDidMount(){

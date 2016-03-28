@@ -1,3 +1,3 @@
 Meteor.startup(function () {
-  ReactDOM.render(<PhysicalForm />, document.getElementById('render-target'));
+  ReactDOM.render(<Container />, document.getElementById('render-target'));
 })

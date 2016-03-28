@@ -1,3 +1,4 @@
+$break-width: 600px
 // input[type='text']
 //   border-bottom: 1px solid #F146C5
 //   box-shadow: 0 1px 0 0 #F146C5
@@ -47,30 +48,49 @@
 	background-color: #7CB6DD
 ///FormToolsBar
 .nav-prs
-  nav
+	.nav
+		.size-text-box
+			display: flex
+			align-items: center
+			flex-flow: row
+			justify-content: center
+			width: 15em
+			margin-left: 1em !important
+			border-radius: 2px
+			color: #0288d1
+			height: 3.2em
+			border: 1px solid #0288d1
+			label
+				color: #0288d1
+				font-weight: bold
+				font-family: Quark-LightBold , verdana, helvetica, sans-serif
+				padding-left: 1.5em
+.nav-prs
+	.sticky
+		.size-text-box
+			display: flex
+			align-items: center
+			flex-flow: row
+			justify-content: center
+			width: 15em
+			margin-left: 1em !important
+			border-radius: 2px
+			color: #fff
+			height: 3.2em
+			border: 1px solid #fff
+			label
+				color: #fff
+				font-weight: bold
+				font-family: Quark-LightBold , verdana, helvetica, sans-serif
+				padding-left: 1.5em
+.nav-prs
+  .nav
     background-color: rgba(255,255,255,0.7)
     box-shadow: none
-    ul
-      li
-        a
-          font-weight: bold
-          font-family: Quark-LightBold , verdana, helvetica, sans-serif
-  .sticky
-    background-color: #01579b
-    ul
-      li
-        a
-          color: #fff
-          font-weight: bold
-          font-family: Quark-LightBold , verdana, helvetica, sans-serif
-		.input-field
-			border: 1px solid #fff !important
-    .brand
-      line-height: 0
-  .section
-    height: 0%
 
-$break-width: 600px
+  .sticky
+    background-color: rgba(0,64,100,0.8)
+
 .section
   position: relative
   background-size: cover
@@ -149,10 +169,10 @@ $break-width: 600px
       line-height: 60px
 
     ul li a
-      color: #6E7982
+      color: #fff
 
     ul li:hover a
-      color: #E33B00
+      color: #fff
 
 .pattern-overlay
     background: rgba(0,0,0,0.3) url("http://codemydesign.ru/CMDSpace/image/css/images/overlay.png") repeat

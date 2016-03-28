@@ -10,7 +10,8 @@ let controlBar = {
     padding: '2em',
     height: '100vh',
     backgroundColor: '#fff',
-    borderRadius: '2px'
+    borderRadius: '2px',
+    opacity: '0.9'
   },
   paddingLeftCol = {
     padding: '2em',
@@ -20,14 +21,16 @@ let controlBar = {
     borderRight: '1px solid rgba(124,182,221,0.5)',
     height: '100vh',
     backgroundColor: '#fff',
-    borderRadius: '2px'
+    borderRadius: '2px',
+    opacity: '0.9'
   },
   paddingTable = {
     paddingLeft: '2em',
     paddingRight: '2em',
     height: '100vh',
     backgroundColor: '#fff',
-    borderRadius: '2px'
+    borderRadius: '2px',
+    opacity: '0.9'
   },
   physicalFormBG = {
     backgroundColor: '#eeeeee',
@@ -45,7 +48,7 @@ let controlBar = {
   },
   sizeImage = {
     width: '100%',
-    height: '90%',
+    height: '85%',
     position: 'absolute',
     left: '0',
     WebkitBoxShadow: '0px 0px 50px 0px rgba(0,0,0,0.8)',

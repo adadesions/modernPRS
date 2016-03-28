@@ -1,22 +1,4 @@
-let sizeTextbox = {
-      width: '15em',
-      marginLeft: '1em',
-      borderRadius: '2px',
-      color: '#0288d1',
-      display: 'flex',
-      alignItems: 'center',
-      flexFlow: 'row',
-      height: '3.2em',
-      paddingRight: '2em',
-      border: '1px solid #0288d1'
-    },
-    labelColor = {
-      color: '#0288d1',
-      fontWeight: 'bold',
-      fontFamily: 'Quark-LightBold , verdana, helvetica, sans-serif',
-      paddingLeft: '2em'
-    },
-    inputPosition = {
+let inputPosition = {
       marginTop: '0.8em',
       marginLeft: '1em',
     }
@@ -91,9 +73,9 @@ FormToolsBar = React.createClass({
             <nav id="nav" className="nav">
               <ul className="clinic-number">
                 <li>
-                  <div style={sizeTextbox} className="input-field">
+                  <div className="input-field size-text-box">
                     <input style={inputPosition} id="cn" type="text" defaultValue="59-000001" className="validate"/>
-                    <label style={labelColor} htmlFor="cn">CN</label>
+                    <label htmlFor="cn">CN</label>
                   </div>
                 </li>
               </ul>
