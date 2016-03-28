@@ -77,10 +77,10 @@ Register = React.createClass({
           </div>
           <div className="row">
             <div className="input-field col l6">
-              <a className="waves-effect waves-light btn">Close</a>
+              <a href="/" className="waves-effect waves-light btn">Back</a>
             </div>
             <div className="input-field col l6">
-              <a className="waves-effect waves-light btn">Login</a>
+              <a className="waves-effect waves-light btn">Submit</a>
             </div>
           </div>
         </form>
