@@ -20,7 +20,8 @@ let colorNav = {
     },
     sizeImage = {
       width: '100%',
-      height: '20em'
+      height: '20em',
+      marginTop: '4.83em'
     },
     displayPatientsBox = {
       width: '100%',
