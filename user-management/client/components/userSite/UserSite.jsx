@@ -20,7 +20,8 @@ let colorNav = {
     },
     sizeImage = {
       width: '100%',
-      height: '20em'
+      height: '20em',
+      marginTop: '4.83em'
     },
     displayPatientsBox = {
       width: '100%',
@@ -44,11 +45,13 @@ let colorNav = {
     },
     paddingRow = {
       padding: '0',
-      position: 'relative'
+      position: 'relative',
+      zIndex: '-1'
     },
     listCenter = {
       display: 'flex',
-      justifyCenter: 'center'
+      justifyCenter: 'center',
+      zIndex: '999'
     },
     avatarCenter = {
       display: 'flex',
