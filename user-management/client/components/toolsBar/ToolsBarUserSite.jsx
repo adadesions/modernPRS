@@ -1,6 +1,5 @@
 let navBox = {
-      width: '83.2%',
-      marginLeft: '16em'
+      width: '100%'
     },
     flowRow = {
       display: 'flex',
@@ -9,7 +8,8 @@ let navBox = {
     },
     dropdownBox = {
       display: 'flex',
-      flexFlow: 'row'
+      flexFlow: 'row',
+      alignItems: 'center'
     },
     widthList = {
       width: '19.8em !important',
@@ -17,7 +17,7 @@ let navBox = {
     },
     bgColorSearch = {
       backgroundColor: '#fff',
-      width: '85em'
+      width: '77em'
     },
     sortByBox = {
       paddingLeft: '1em',
@@ -27,7 +27,11 @@ let navBox = {
       color: '#444'
     },
     textSize = {
-      fontSize: '20px'
+      fontSize: '18px',
+      margin: '0'
+    },
+    arrowDropdown = {
+      lineHeight: '57px'
     }
 
 ToolsBarUserSite = React.createClass({
@@ -58,7 +62,7 @@ ToolsBarUserSite = React.createClass({
                 </div>
               </nav>
               <div style={sortByBox} className="input-field">
-                <a style={dropdownBox} className="dropdown-button" href="#!" data-activates="dropdown1"><h5 style={textSize}>Sort by</h5><i className="material-icons right">arrow_drop_down</i></a>
+                <a style={dropdownBox} className="dropdown-button" href="#!" data-activates="dropdown1"><h5 style={textSize}>Sort by</h5><i style={arrowDropdown} className="material-icons right">arrow_drop_down</i></a>
               </div>
             </nav>
           </div>
