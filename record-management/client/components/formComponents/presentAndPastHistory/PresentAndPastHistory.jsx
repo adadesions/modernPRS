@@ -46,7 +46,7 @@ PresentAndPastHistory = React.createClass({
           historyData = sortByIndex([newData].concat(oldHistoryData))
       this.setState({historyData: historyData}, function () {
           clearInput()
-          // console.log($('table').find('tr').text());
+          Session.set('historyData', this.state.historyData)          
       })
   },
 

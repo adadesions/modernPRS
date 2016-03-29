@@ -8,8 +8,18 @@ Patients.allow({
 History = Astro.Class({
   name: 'History',
   fields: {
-    duration: 'string',
-    message: 'string'
+    index: 'number',
+    period: 'string',
+    messageHistory: 'string'
+  }
+})
+
+Business = Astro.Class({
+  name: 'Business',
+  fields: {
+    businessName: 'string',
+    ownerName: 'string',
+    ownerId: 'string'
   }
 })
 
@@ -18,6 +28,9 @@ Patient = Astro.Class({
   collection: Patients,
   fields: {
     CN: 'number',
+    business: {
+        nested: 'Business'
+    },
     information: {
         firstname: {
           type: 'string',

@@ -45,7 +45,7 @@ Register = React.createClass({
     $rePassword.addClass('valid').removeClass('invalid')
   },
 
-  _onClickSubmit() {
+  _onClickSubmit() {      
       let businessName = $('#business-name').val(),
           businessType = $('#business-type').find(':selected').val(),
           ownerName = $('#owner-name').val(),
