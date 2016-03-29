@@ -8,10 +8,11 @@ LoggedInMixin = {
       }
       else if(!isLogin){
           let isRoot = FlowRouter.getRouteName() !== 'root',
-              isRegister = FlowRouter.getRouteName() !== 'register'
-          if(isRegister){
-
-          }
+              isRegister = FlowRouter.getRouteName() !== 'register',
+              currentPath = FlowRouter.current().path
+              isResetPassword = currentPath.includes('reset-password')
+                        
+          if(isRegister){}
           else if(!isRoot){
             FlowRouter.go('login')
           }

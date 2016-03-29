@@ -67,6 +67,7 @@ Register = React.createClass({
               username: ownerName,
               profile: newUser
             })
+            Meteor.call('sendVerificationEmail')
         }
       }
       else{
