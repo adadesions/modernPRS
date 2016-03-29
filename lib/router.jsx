@@ -33,10 +33,10 @@ rootRoutes.route('/register', {
 
 //USERSITE
 var userRoutes = FlowRouter.group({
-  prefix: '/usersite',
+  prefix: '/app',
   name: 'usersite',
 })
-userRoutes.route('/', {
+userRoutes.route('/:businessName', {
   name: 'mainUserSite',
   action() {
     ReactLayout.render(Container, {content: <UserSite />})

@@ -4,14 +4,15 @@ LoggedInMixin = {
       let isLogin = !!Meteor.user()
 
       if(isLogin) {
-        FlowRouter.go('mainUserSite')
+          let params = Meteor.user().profile.businessName
+          FlowRouter.go(`/app/${params}`)
       }
       else if(!isLogin){
           let isRoot = FlowRouter.getRouteName() !== 'root',
               isRegister = FlowRouter.getRouteName() !== 'register',
               currentPath = FlowRouter.current().path
               isResetPassword = currentPath.includes('reset-password')
-                        
+
           if(isRegister){}
           else if(!isRoot){
             FlowRouter.go('login')
@@ -26,13 +27,12 @@ LoggedInMixin = {
 EnsureLogInMixin = {
   mixins: [ReactMeteorData],
   getMeteorData() {
-      let isLogin = !!Meteor.user()
+      let data = {},
+          isLogin = !!Meteor.user()
 
       if(!isLogin) {
           FlowRouter.go('login')
       }
-      return {
-        user: isLogin
-      }
+      return data
   }
 }
