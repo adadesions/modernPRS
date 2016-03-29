@@ -17,7 +17,7 @@ let navBox = {
     },
     bgColorSearch = {
       backgroundColor: '#fff',
-      width: '77em'
+      height: '4.5em'
     },
     sortByBox = {
       paddingLeft: '1em',
@@ -32,6 +32,9 @@ let navBox = {
     },
     arrowDropdown = {
       lineHeight: '57px'
+    },
+    inputSearch = {
+      marginTop: '-0.1em'
     }
 
 ToolsBarUserSite = React.createClass({
@@ -52,11 +55,11 @@ ToolsBarUserSite = React.createClass({
               </ul>
               <nav style={bgColorSearch} className="search-nav">
                 <div className="nav-wrapper">
-                  <form>
-                    <div className="input-field">
-                      <input id="search" type="search" required/>
-                      <label htmlFor="search"><i className="material-icons">search</i></label>
-                      <i className="material-icons">close</i>
+                  <form style={bgColorSearch}>
+                    <div style={bgColorSearch} className="input-field">
+                      <input style={inputSearch} id="search" type="search" required/>
+                      <label style={inputSearch} htmlFor="search"><i style={inputSearch} className="material-icons">search</i></label>
+                      <i style={inputSearch} className="material-icons">close</i>
                     </div>
                   </form>
                 </div>

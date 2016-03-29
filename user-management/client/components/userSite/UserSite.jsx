@@ -1,8 +1,8 @@
 let colorNav = {
-      backgroundColor: '#3B3F5E'
+      backgroundColor: '#004064'
     },
     marginList = {
-      marginTop: '3em',
+      paddingTop: '3em',
       color: '#fff',
       display: 'flex',
       flexFlow: 'row',
@@ -20,8 +20,7 @@ let colorNav = {
     },
     sizeImage = {
       width: '100%',
-      height: '20em',
-      marginTop: '4.8em',
+      height: '20em'
     },
     displayPatientsBox = {
       width: '100%',
@@ -29,7 +28,7 @@ let colorNav = {
     sizeImgUser = {
       width: '10em',
       height: '10em',
-      marginTop: '6.3em'
+      border: '3px solid #212121'
     },
     alignText = {
       textAlign: 'center',
@@ -50,6 +49,14 @@ let colorNav = {
     listCenter = {
       display: 'flex',
       justifyCenter: 'center'
+    },
+    avatarCenter = {
+      display: 'flex',
+      alignItems: 'center',
+      height: '25em',
+      marginLeft: '1.5em',
+      color: '#fff',
+      textAlign: 'center'
     }
 
 UserSite = React.createClass({
@@ -113,10 +120,12 @@ UserSite = React.createClass({
       <div className="row user-side">
         <div style={paddingRowNav} className="col l2 side-nav-left z-depth-1">
           <ul style={colorNav} id="slide-out" className="side-nav fixed">
-            <li style={alignText}>
-              <img style={sizeImgUser} src="/images/ceo.png" className="circle"/>
-              <h5>Ada Kaminkure</h5>
-            </li>
+            <div style={avatarCenter}>
+              <div>
+                <img style={sizeImgUser} src="/images/ceo.png" className="circle"/>
+                <h5>Ada Kaminkure</h5>
+              </div>
+            </div>
             <li style={listCenter}><a href="/usersite/physicalform" style={marginList}><img style={paddingImg} src="/images/icon/new.png" className="circle"/><h6>New</h6></a></li>
             <li style={listCenter}><a style={colorText} href="#!"><img style={paddingImg} src="/images/icon/history.png" className="circle"/><h6>History</h6></a></li>
             <li style={listCenter}><a style={colorText} href="#!"><img style={paddingImg} src="/images/icon/trash.png" className="circle"/><h6>Trash</h6></a></li>
