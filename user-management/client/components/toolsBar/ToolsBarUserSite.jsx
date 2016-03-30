@@ -10,7 +10,8 @@ let navBox = {
     dropdownBox = {
       display: 'flex',
       flexFlow: 'row',
-      alignItems: 'center'
+      alignItems: 'center',
+      justifyContent: 'center'
     },
     widthList = {
       width: '19.8em !important',
@@ -22,10 +23,12 @@ let navBox = {
     },
     sortByBox = {
       paddingLeft: '1em',
-      paddingRight: '1em'
+      paddingRight: '1em',
+      width: '15em'
     },
     textColor = {
-      color: '#444'
+      color: '#444',
+      fontSize: '12px'
     },
     textSize = {
       fontSize: '18px',
@@ -49,10 +52,13 @@ ToolsBarUserSite = React.createClass({
           <div className="container">
             <nav id="nav" className="nav">
               <ul style={widthList} id="dropdown1" className="dropdown-content">
-                <li><a style={textColor} href="#!">one</a></li>
-                <li><a style={textColor} href="#!">two</a></li>
+                <li><a style={textColor} href="#!">Name</a></li>
+                <li><a style={textColor} href="#!">Create Date</a></li>
+                <li><a style={textColor} href="#!">Age</a></li>
+                <li><a style={textColor} href="#!">Last Modified</a></li>
+                <li><a style={textColor} href="#!">Pain Score</a></li>
                 <li className="divider"></li>
-                <li><a style={textColor} href="#!">three</a></li>
+                <li><a style={textColor} href="#!">Default</a></li>
               </ul>
               <nav style={bgColorSearch} className="search-nav">
                 <div className="nav-wrapper">
