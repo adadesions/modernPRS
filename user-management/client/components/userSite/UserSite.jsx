@@ -116,6 +116,10 @@ UserSite = React.createClass({
 
   },
 
+  _onClickNew() {
+      FlowRouter.go('physicalForm')
+  },
+
   render(){
       return(
         <div className="row user-side">
@@ -127,18 +131,18 @@ UserSite = React.createClass({
                   <h5>Ada Kaminkure</h5>
                 </div>
               </div>
-              <li style={listCenter}><a href="/app/prs/create/physicalform" style={marginList}><img style={paddingImg} src="/images/icon/new.png" className="circle"/><h6>New</h6></a></li>
+              <li style={listCenter}><a style={marginList} href="#" onClick={this._onClickNew}><img style={paddingImg} src="/images/icon/new.png" className="circle"/><h6>New</h6></a></li>
               <li style={listCenter}><a style={colorText} href="#!"><img style={paddingImg} src="/images/icon/history.png" className="circle"/><h6>History</h6></a></li>
               <li style={listCenter}><a style={colorText} href="#!"><img style={paddingImg} src="/images/icon/trash.png" className="circle"/><h6>Trash</h6></a></li>
               <li style={listCenter}><a style={colorText} href="#!"><img style={paddingImg} src="/images/icon/set.png" className="circle"/><h6>Set</h6></a></li>
             </ul>
           </div>
+          <ToolsBarUserSite />
           <div style={paddingRow} className="col l10">
-            <ToolsBarUserSite />
-              <div className="cover-user-side">
-                <img className="z-depth-1" style={sizeImage} src="/images/cover/cover.jpg"/>
-              </div>
-              <PatientRecord />
+            <div className="cover-user-side">
+              <img className="z-depth-1" style={sizeImage} src="/images/cover/cover.jpg"/>
+            </div>
+            <PatientRecord />
           </div>
         </div>
       )
