@@ -35,7 +35,8 @@ FormToolsBar = React.createClass({
   },
 
   _onClickSave() {
-      let firstname = $('#firstname').val(),
+      let CN = $('#cn').val(),
+          firstname = $('#firstname').val(),
           lastname = $('#lastname').val(),
           bod = $('#bod').val(),
           gender = $('#gender').val(),
@@ -67,6 +68,7 @@ FormToolsBar = React.createClass({
           patient = new Patient()
 
       patient.set({
+          CN,
           business,
           information: {
             firstname,
@@ -102,7 +104,11 @@ FormToolsBar = React.createClass({
       })
 
       if(this.isRequestedEmpty()){
-          patient.save()
+          patient.save(function () {
+            let businessName = Session.get('businessName'),
+                path = FlowRouter.path('mainPrsApp', businessName)
+            FlowRouter.go(path)
+          })
       }
       else{
         this.addInvalidClassToRequested()
@@ -110,8 +116,10 @@ FormToolsBar = React.createClass({
 
   },
 
-  _onClickCancle(){
-    FlowRouter.go('root')
+  _onClickCancle() {
+      let businessName = Session.get('businessName'),
+          path = FlowRouter.path('mainPrsApp', businessName)
+      FlowRouter.go(path)
   },
 
   padZero(number, digits) {
@@ -121,7 +129,7 @@ FormToolsBar = React.createClass({
 
   displayCN() {
       let fullYear = (new Date().getFullYear()+543).toString(),
-          amountOfRecord = this.data.amountOfRecord,
+          amountOfRecord = this.data.amountOfRecord+1,
           codeFormat = this.padZero(amountOfRecord, 6)
           cnString = `${fullYear.substring(2)}-${codeFormat}`
       return cnString
@@ -144,25 +152,26 @@ FormToolsBar = React.createClass({
                       style={inputPosition} id="cn" type="text"
                       className="validate"
                     />
-                  <label htmlFor="cn" className='active'>CN</label>
+                    <label htmlFor="cn" className='active'>CN</label>
                   </div>
                 </li>
               </ul>
               <ul className="navbar">
                 <li>
-                    <a
-                      id="save-btn"
-                      className="waves-effect waves-light btn green accent-4"
-                      onClick={this._onClickSave}
-                    >
-                    Save
-                    </a>
+                  <a
+                    id="save-btn"
+                    className="waves-effect waves-light btn green accent-4"
+                    onClick={this._onClickSave}
+                  >
+                  Save
+                  </a>
                 </li>
                 <li>
-                    <a
-                      id="cancle-btn"
-                      className="waves-effect waves-light btn red accent-4"
-                      onClick={this._onClickCancle}
+                  <a
+                    href="#"
+                    id="cancle-btn"
+                    className="waves-effect waves-light btn red accent-4"
+                    onClick={this._onClickCancle}
                     >
                       Cancle
                     </a>

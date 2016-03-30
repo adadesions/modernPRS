@@ -41,7 +41,7 @@ Login = React.createClass({
               FlowRouter.go('login')
             }
             else{
-              FlowRouter.go('mainUserSite')
+              FlowRouter.go('mainPrsApp')
             }
         })
     },

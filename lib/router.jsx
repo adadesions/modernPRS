@@ -37,6 +37,14 @@ var userRoutes = FlowRouter.group({
   name: 'usersite',
 })
 
+userRoutes.route('/', {
+    name: 'prsRoot',
+    triggersEnter: [function (context, redirect) {
+        let goingTo = '/login'
+        redirect(goingTo)
+    }]
+})
+
 userRoutes.route('/create/physicalform', {
     name: 'physicalForm',
     action() {
@@ -45,7 +53,7 @@ userRoutes.route('/create/physicalform', {
 })
 
 userRoutes.route('/:businessName', {
-  name: 'mainUserSite',
+  name: 'mainPrsApp',
   action() {
     ReactLayout.render(Container, {content: <UserSite />})
   }

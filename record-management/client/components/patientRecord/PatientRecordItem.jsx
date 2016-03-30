@@ -16,7 +16,7 @@ PatientRecordItem = React.createClass({
 
   render() {
     let record = this.props.record,
-        cn = record.cn,
+        cn = record.CN,
         contraindication = record.interview.contraindication,
         firstname = record.information.firstname
      return (

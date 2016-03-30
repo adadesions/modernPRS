@@ -27,7 +27,7 @@ Patient = Astro.Class({
   name: 'Patients',
   collection: Patients,
   fields: {
-    CN: 'number',
+    CN: 'string',
     business: {
         nested: 'Business'
     },
