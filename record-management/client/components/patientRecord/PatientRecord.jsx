@@ -1,5 +1,12 @@
 let displayPatientsBox = {
       width: '100%',
+      zIndex: '999'
+    },
+    colSize = {
+      width: '5em'
+    },
+    colNameSize = {
+      width: '25em'
     }
 
 PatientRecord = React.createClass({
@@ -11,7 +18,7 @@ PatientRecord = React.createClass({
           subscriber = Meteor.subscribe('onlyThisBusinessName', businessName)
       if(subscriber.ready()){
           data.records = Patients.find().fetch() || []
-      }      
+      }
       return data
   },
 
@@ -29,9 +36,11 @@ PatientRecord = React.createClass({
           <table className="striped centered">
             <thead>
               <tr>
-                  <th data-field="cn">CN.</th>
-                  <th data-field="contraindication">Contraindication</th>
-                  <th data-field="name">Name</th>
+                  <th style={colSize} data-field="cn">No.</th>
+                  <th style={colSize} data-field="cn">CN.</th>
+                  <th style={colNameSize} data-field="name">Name</th>
+                  <th style={colSize} data-field="contraindication">Contraindication</th>
+                  <th style={colSize} data-field="tools"></th>
               </tr>
             </thead>
             <tbody>

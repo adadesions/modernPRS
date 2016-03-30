@@ -110,6 +110,10 @@ FormToolsBar = React.createClass({
 
   },
 
+  _onClickCancle(){
+    FlowRouter.go('root')
+  },
+
   padZero(number, digits) {
       let code = "0000000000"+number
       return code.substring(code.length-digits)
@@ -156,9 +160,9 @@ FormToolsBar = React.createClass({
                 </li>
                 <li>
                     <a
-                      href="/usersite"
                       id="cancle-btn"
                       className="waves-effect waves-light btn red accent-4"
+                      onClick={this._onClickCancle}
                     >
                       Cancle
                     </a>
