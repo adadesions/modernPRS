@@ -48,13 +48,14 @@ let colorNav = {
     listCenter = {
       display: 'flex',
       justifyCenter: 'center',
-      zIndex: '999'
+      zIndex: '999',
+      cursor: 'pointer'
     },
     avatarCenter = {
       display: 'flex',
       alignItems: 'center',
+      justifyContent: 'center',
       height: '25em',
-      marginLeft: '1.5em',
       color: '#fff',
       textAlign: 'center'
     }
