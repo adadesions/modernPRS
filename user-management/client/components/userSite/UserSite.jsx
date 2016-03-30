@@ -116,6 +116,10 @@ UserSite = React.createClass({
 
   },
 
+  _onClickAdd() {
+      FlowRouter.go('physicalForm')
+  },
+
   render(){
       return(
         <div className="row user-side">
@@ -127,7 +131,7 @@ UserSite = React.createClass({
                   <h5>Ada Kaminkure</h5>
                 </div>
               </div>
-              <li style={listCenter}><a href="/usersite/physicalform" style={marginList}><img style={paddingImg} src="/images/icon/new.png" className="circle"/><h6>New</h6></a></li>
+              <li style={listCenter}><a style={marginList} onClick={this._onClickAdd}><img style={paddingImg} src="/images/icon/new.png" className="circle"/><h6>New</h6></a></li>
               <li style={listCenter}><a style={colorText} href="#!"><img style={paddingImg} src="/images/icon/history.png" className="circle"/><h6>History</h6></a></li>
               <li style={listCenter}><a style={colorText} href="#!"><img style={paddingImg} src="/images/icon/trash.png" className="circle"/><h6>Trash</h6></a></li>
               <li style={listCenter}><a style={colorText} href="#!"><img style={paddingImg} src="/images/icon/set.png" className="circle"/><h6>Set</h6></a></li>
