@@ -5,6 +5,7 @@ Patients.allow({
     return true
   }
 })
+
 History = Astro.Class({
   name: 'History',
   fields: {
