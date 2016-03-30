@@ -3,7 +3,6 @@ PatientRecordItem = React.createClass({
       record: React.PropTypes.any.isRequired
   },
 
-
   render() {
       let record = this.props.record,
           cn = record.CN,
@@ -11,10 +10,12 @@ PatientRecordItem = React.createClass({
           firstname = record.information.firstname
        return (
          <tr>
+           <td></td>
            <td>{cn}</td>
            <td>{contraindication}</td>
            <td>{firstname}</td>
+           <td><ToolsPatientRecord /></td>
          </tr>
-     )
+       )
   }
 })
