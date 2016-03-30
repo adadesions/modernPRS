@@ -1,5 +1,6 @@
 let navBox = {
-      width: '100%'
+      width: '100%',
+      zIndex: '999'
     },
     flowRow = {
       display: 'flex',

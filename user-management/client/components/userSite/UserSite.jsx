@@ -135,8 +135,9 @@ UserSite = React.createClass({
             <li style={listCenter}><a style={colorText} href="#!"><img style={paddingImg} src="/images/icon/set.png" className="circle"/><h6>Set</h6></a></li>
           </ul>
         </div>
+        <ToolsBarUserSite />
         <div style={paddingRow} className="col l10">
-          <ToolsBarUserSite />
+
             <div className="cover-user-side">
               <img className="z-depth-1" style={sizeImage} src="/images/cover/cover.jpg"/>
             </div>
