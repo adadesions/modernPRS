@@ -28,25 +28,26 @@ rootRoutes.route('/register', {
         content: <Register />
       })
     }
-});
+})
 //END ROOT
 
 //USERSITE
 var userRoutes = FlowRouter.group({
-  prefix: '/app',
+  prefix: '/app/prs',
   name: 'usersite',
 })
+
+userRoutes.route('/create/physicalform', {
+    name: 'physicalForm',
+    action() {
+      ReactLayout.render(Container, {content: <PhysicalForm />})
+    }
+})
+
 userRoutes.route('/:businessName', {
   name: 'mainUserSite',
   action() {
     ReactLayout.render(Container, {content: <UserSite />})
   }
 })
-
-userRoutes.route('/physicalform', {
-    name: 'physicalForm',
-    action() {
-      ReactLayout.render(Container, {content: <PhysicalForm />})
-    }
-});
 //END USERSITE

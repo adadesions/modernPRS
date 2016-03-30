@@ -5,7 +5,7 @@ LoggedInMixin = {
 
       if(isLogin) {
           let params = Meteor.user().profile.businessName
-          FlowRouter.go(`/app/${params}`)
+          FlowRouter.go(`/app/prs/${params}`)
       }
       else if(!isLogin){
           let isRoot = FlowRouter.getRouteName() !== 'root',
@@ -33,6 +33,11 @@ EnsureLogInMixin = {
       if(!isLogin) {
           FlowRouter.go('login')
       }
+      // else{
+      //     let currentRouteName = FlowRouter.current().path
+      //     console.log(currentRouteName);
+      //     FlowRouter.path(currentRouteName)
+      // }
       return data
   }
 }
