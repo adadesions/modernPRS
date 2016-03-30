@@ -23,9 +23,6 @@ let colorNav = {
       height: '20em',
       marginTop: '4.83em'
     },
-    displayPatientsBox = {
-      width: '100%',
-    },
     sizeImgUser = {
       width: '10em',
       height: '10em',
@@ -64,6 +61,7 @@ let colorNav = {
 
 UserSite = React.createClass({
   mixins: [EnsureLogInMixin],
+
   componentDidMount(){
       $('slide-out').sideNav({
           menuWidth: 300, // Default is 240
@@ -119,114 +117,30 @@ UserSite = React.createClass({
   },
 
   render(){
-    return(
-      <div className="row user-side">
-        <div style={paddingRowNav} className="col l2 side-nav-left z-depth-1">
-          <ul style={colorNav} id="slide-out" className="side-nav fixed">
-            <div style={avatarCenter}>
-              <div>
-                <img style={sizeImgUser} src="/images/ceo.png" className="circle"/>
-                <h5>Ada Kaminkure</h5>
+      return(
+        <div className="row user-side">
+          <div style={paddingRowNav} className="col l2 side-nav-left z-depth-1">
+            <ul style={colorNav} id="slide-out" className="side-nav fixed">
+              <div style={avatarCenter}>
+                <div>
+                  <img style={sizeImgUser} src="/images/ceo.png" className="circle"/>
+                  <h5>Ada Kaminkure</h5>
+                </div>
               </div>
-            </div>
-            <li style={listCenter}><a href="/usersite/physicalform" style={marginList}><img style={paddingImg} src="/images/icon/new.png" className="circle"/><h6>New</h6></a></li>
-            <li style={listCenter}><a style={colorText} href="#!"><img style={paddingImg} src="/images/icon/history.png" className="circle"/><h6>History</h6></a></li>
-            <li style={listCenter}><a style={colorText} href="#!"><img style={paddingImg} src="/images/icon/trash.png" className="circle"/><h6>Trash</h6></a></li>
-            <li style={listCenter}><a style={colorText} href="#!"><img style={paddingImg} src="/images/icon/set.png" className="circle"/><h6>Set</h6></a></li>
-          </ul>
-        </div>
-        <ToolsBarUserSite />
-        <div style={paddingRow} className="col l10">
-
+              <li style={listCenter}><a href="/usersite/physicalform" style={marginList}><img style={paddingImg} src="/images/icon/new.png" className="circle"/><h6>New</h6></a></li>
+              <li style={listCenter}><a style={colorText} href="#!"><img style={paddingImg} src="/images/icon/history.png" className="circle"/><h6>History</h6></a></li>
+              <li style={listCenter}><a style={colorText} href="#!"><img style={paddingImg} src="/images/icon/trash.png" className="circle"/><h6>Trash</h6></a></li>
+              <li style={listCenter}><a style={colorText} href="#!"><img style={paddingImg} src="/images/icon/set.png" className="circle"/><h6>Set</h6></a></li>
+            </ul>
+          </div>
+          <ToolsBarUserSite />
+          <div style={paddingRow} className="col l10">
             <div className="cover-user-side">
               <img className="z-depth-1" style={sizeImage} src="/images/cover/cover.jpg"/>
             </div>
-            <div style={displayPatientsBox} className="display-patients">
-              <table className="striped centered">
-                <thead>
-                  <tr>
-                      <th data-field="id">CN.</th>
-                      <th data-field="name">Contraindication</th>
-                      <th data-field="price">Name</th>
-                  </tr>
-                </thead>
-
-                <tbody>
-                  <tr>
-                    <td>Alvin</td>
-                    <td>Eclair</td>
-                    <td>$0.87</td>
-                  </tr>
-                  <tr>
-                    <td>Alan</td>
-                    <td>Jellybean</td>
-                    <td>$3.76</td>
-                  </tr>
-                  <tr>
-                    <td>Jonathan</td>
-                    <td>Lollipop</td>
-                    <td>$7.00</td>
-                  </tr>
-                  <tr>
-                    <td>Jonathan</td>
-                    <td>Lollipop</td>
-                    <td>$7.00</td>
-                  </tr>
-                  <tr>
-                    <td>Jonathan</td>
-                    <td>Lollipop</td>
-                    <td>$7.00</td>
-                  </tr>
-                  <tr>
-                    <td>Jonathan</td>
-                    <td>Lollipop</td>
-                    <td>$7.00</td>
-                  </tr>
-                  <tr>
-                    <td>Jonathan</td>
-                    <td>Lollipop</td>
-                    <td>$7.00</td>
-                  </tr>
-                  <tr>
-                    <td>Jonathan</td>
-                    <td>Lollipop</td>
-                    <td>$7.00</td>
-                  </tr>
-                  <tr>
-                    <td>Jonathan</td>
-                    <td>Lollipop</td>
-                    <td>$7.00</td>
-                  </tr>
-                  <tr>
-                    <td>Jonathan</td>
-                    <td>Lollipop</td>
-                    <td>$7.00</td>
-                  </tr>
-                  <tr>
-                    <td>Jonathan</td>
-                    <td>Lollipop</td>
-                    <td>$7.00</td>
-                  </tr>
-                  <tr>
-                    <td>Jonathan</td>
-                    <td>Lollipop</td>
-                    <td>$7.00</td>
-                  </tr>
-                  <tr>
-                    <td>Jonathan</td>
-                    <td>Lollipop</td>
-                    <td>$7.00</td>
-                  </tr>
-                  <tr>
-                    <td>Jonathan</td>
-                    <td>Lollipop</td>
-                    <td>$7.00</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+            <PatientRecord />
+          </div>
         </div>
-      </div>
-    )
+      )
   }
 })
