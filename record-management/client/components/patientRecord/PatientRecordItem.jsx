@@ -16,7 +16,7 @@ PatientRecordItem = React.createClass({
            <td>{cn}</td>
            <td>{name}</td>
            <td>{contraindication}</td>
-           <td><ToolsPatientRecord /></td>
+           <td><ToolsPatientRecord cn={cn}/></td>
          </tr>
        )
   }

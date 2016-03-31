@@ -32,12 +32,12 @@ rootRoutes.route('/register', {
 //END ROOT
 
 //USERSITE
-var userRoutes = FlowRouter.group({
+var prsRoutes = FlowRouter.group({
   prefix: '/app/prs',
   name: 'usersite',
 })
 
-userRoutes.route('/', {
+prsRoutes.route('/', {
     name: 'prsRoot',
     triggersEnter: [function (context, redirect) {
         let goingTo = '/login'
@@ -45,14 +45,21 @@ userRoutes.route('/', {
     }]
 })
 
-userRoutes.route('/create/physicalform', {
-    name: 'physicalForm',
+prsRoutes.route('/create/physicalform', {
+    name: 'createPhysicalForm',
     action() {
       ReactLayout.render(Container, {content: <PhysicalForm />})
     }
 })
 
-userRoutes.route('/:businessName', {
+prsRoutes.route('/show/physicalform/:cn', {
+    name: 'showPhysicalForm',
+    action() {
+      ReactLayout.render(Container, {content: <PhysicalForm />})
+    }
+})
+
+prsRoutes.route('/:businessName', {
   name: 'mainPrsApp',
   action() {
     ReactLayout.render(Container, {content: <UserSite />})

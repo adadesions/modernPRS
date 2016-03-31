@@ -22,9 +22,9 @@ PatientDetialRight = React.createClass({
       const findExectlyAge = (bod) => {
           let bodValue = bod,
               daynMonth = bodValue[0].split(' '),
-              patientDay = daynMonth[0].trim(),
-              patientMonth = monthToNumber(daynMonth[1].trim()),
-              patientYear = bodValue[1].trim(),
+              patientDay = daynMonth[0].trim() || "",
+              patientMonth = monthToNumber(daynMonth[1].trim()) || "",
+              patientYear = bodValue[1].trim() || "",
               now = new Date(),
               currentYear = now.getFullYear(),
               currentDay = now.getDate(),
