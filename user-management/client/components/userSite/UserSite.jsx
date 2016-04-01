@@ -13,6 +13,9 @@ let alignText = {
       width: '100%',
       height: '20em',
       marginTop: '4.83em'
+    },
+    paddingRowCover = {
+      marginBottom: '-0.4em'
     }
 
 UserSite = React.createClass({
@@ -79,9 +82,10 @@ UserSite = React.createClass({
           </div>
           <ToolsBarUserSite />
           <div style={paddingRow} className="col l10 cover-and-record">
-            <div className="cover-user-side">
+            <div className="cover-user-side" style={paddingRowCover}>
               <img className="z-depth-1" style={sizeImage} src="/images/cover/cover.jpg"/>
             </div>
+            <Stat />
             <PatientRecord />
           </div>
         </div>
