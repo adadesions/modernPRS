@@ -14,12 +14,28 @@ let flowRow = {
 
 
 ToolsPatientRecord = React.createClass({
+  propsTypes: {
+      cn: React.PropTypes.string.isRequired
+  },
+
+  _deleteRecord() {
+    Meteor.call('removePatientRecord', this.props.cn, function () {
+      console.log("DELETE");
+    })            
+  },
 
   render(){
       return(
         <div id="toolsRecord" style={flowRow}>
           <div style={flowRowIcon}><i className="small material-icons">mode_edit</i>Edit</div>
-          <div style={flowRowIcon}><i className="small material-icons">delete</i>Delete</div>
+          <div style={flowRowIcon}>
+            <i
+              className="small material-icons"
+              onClick={this._deleteRecord}
+            >
+            delete</i>
+            Delete
+          </div>
         </div>
       )
   }

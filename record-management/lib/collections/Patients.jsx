@@ -1,8 +1,11 @@
 Patients = new Mongo.Collection("patients")
 
 Patients.allow({
-  insert: function (doc) {
-    return true
+  insert: function (userId, doc) {
+    return (userId && doc.business.ownerId === userId )
+  },
+  remove: function (userId, doc) {
+    return (userId && doc.business.ownerId === userId )
   }
 })
 

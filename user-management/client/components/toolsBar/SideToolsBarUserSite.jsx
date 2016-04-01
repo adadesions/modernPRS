@@ -79,7 +79,7 @@ SideToolsBarUserSite = React.createClass({
 
 
   _onClickNew() {
-      FlowRouter.go('physicalForm')
+      FlowRouter.go('createPhysicalForm')
   },
 
 
