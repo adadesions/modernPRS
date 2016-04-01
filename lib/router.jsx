@@ -66,3 +66,13 @@ prsRoutes.route('/:businessName', {
   }
 })
 //END USERSITE
+
+
+rootRoutes.route('/patientreaddetial', {
+    name: 'patientReadDetial',
+    action() {
+      ReactLayout.render(Container, {
+        content: <PatientReadDetial />
+      })
+    }
+});
