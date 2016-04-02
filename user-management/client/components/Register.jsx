@@ -8,7 +8,7 @@ let center = {
     alignCenter = {
       display: 'flex',
       alignItems: 'center',
-      height: '100vh',
+      height: '120vh',
       background: 'url("/images/cover/cover.jpg")',
       marginBottom: '0'
     },
