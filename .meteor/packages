@@ -19,6 +19,10 @@ ecmascript              # Enable ECMAScript2015+ syntax in app code
 react
 fourseven:scss
 flemay:less-autoprefixer
-materialize:materialize
+poetic:materialize-scss
 jagi:astronomy
 ryanswrt:lazyjs
+kadira:react-layout
+accounts-password
+kadira:flow-router
+d3js:d3
