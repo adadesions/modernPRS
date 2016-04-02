@@ -12,7 +12,7 @@ Stat = React.createClass({
               <div id="porcion2" className="recorte"><div className="quesito data2" os-rel="39"></div></div>
               <div id="porcion3" className="recorte"><div className="quesito data4" os-rel="31"></div></div>
               <div id="porcionFin" className="recorte"><div className="quesito data3" os-rel="9"></div></div>
-              <p className="center-date z-depth-1">April<br/><span className="scnd-font-color">test</span></p>
+              <p className="center-date z-depth-1">April<br/><span className="scnd-font-color">2016</span></p>
             </div>
             <ul className="os-percentages horizontal-list">
                 <li>
