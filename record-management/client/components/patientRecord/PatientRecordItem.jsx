@@ -3,6 +3,19 @@ PatientRecordItem = React.createClass({
       record: React.PropTypes.any.isRequired
   },
 
+  _onClickItem() {
+      // FlowRouter.go('showPhysicalForm')
+  },
+
+  componentDidMount(){
+
+      $('.user-item').hover(function(){
+          $('.user-item').toggleClass('.shadow-item')
+      })
+
+  },
+
+
   render() {
       let record = this.props.record,
           cn = record.CN,
@@ -11,7 +24,7 @@ PatientRecordItem = React.createClass({
           lastname = record.information.lastname,
           name = `${firstname} ${lastname}`
        return (
-         <tr>
+         <tr className="user-item" onClick={this._onClickItem()}>
            <td></td>
            <td>{cn}</td>
            <td>{name}</td>

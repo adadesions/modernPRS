@@ -52,12 +52,12 @@ prsRoutes.route('/create/physicalform', {
     }
 })
 
-prsRoutes.route('/show/physicalform/:cn', {
-    name: 'showPhysicalForm',
-    action() {
-      ReactLayout.render(Container, {content: <PhysicalForm />})
-    }
-})
+// prsRoutes.route('/show/physicalform/:cn', {
+//     name: 'showPhysicalForm',
+//     action() {
+//       ReactLayout.render(Container, {content: <PhysicalForm />})
+//     }
+// })
 
 prsRoutes.route('/:businessName', {
   name: 'mainPrsApp',
@@ -68,11 +68,11 @@ prsRoutes.route('/:businessName', {
 //END USERSITE
 
 
-rootRoutes.route('/patientreaddetial', {
-    name: 'patientReadDetial',
-    action() {
-      ReactLayout.render(Container, {
-        content: <PatientReadDetial />
-      })
-    }
-});
+// rootRoutes.route('/patientreaddetial', {
+//     name: 'patientReadDetial',
+//     action() {
+//       ReactLayout.render(Container, {
+//         content: <PatientReadDetial />
+//       })
+//     }
+// });
